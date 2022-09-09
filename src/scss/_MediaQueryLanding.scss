@@ -1,0 +1,263 @@
+@media (max-width: 1280px) {
+  .wrap_text {
+    width: 90%;
+  }
+  .hero_contents {
+    margin: auto;
+    margin-top: 17%;
+  }
+  .hero_image {
+    width: 100%;
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+  }
+  .section2 {
+    flex-wrap: wrap;
+    & > div {
+      width: 50%;
+    }
+  }
+  .brands {
+    width: 90%;
+  }
+  .section6 {
+    & > div {
+      width: 140%;
+    }
+  }
+  .section7 {
+    margin: 60px auto;
+    h2 {
+      width: 80%;
+    }
+    div {
+      input {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrap_text {
+    width: 100%;
+  }
+  .brands_details {
+    padding-bottom: 120px;
+    & > .brands {
+      width: 90%;
+    }
+    .details {
+      width: 90%;
+      & > div {
+        width: 90%;
+      }
+    }
+  }
+  .section6 {
+    padding-right: 20px;
+    & > div {
+      width: 190%;
+    }
+  }
+
+  footer {
+    padding: 80px 0;
+    padding-bottom: 70px;
+
+    flex-wrap: wrap;
+    & div {
+      margin-bottom: 60px;
+    }
+    & > div:nth-child(1) {
+      width: 20%;
+    }
+    & > div:nth-child(2) {
+      width: 30%;
+    }
+    & > div:nth-child(3) {
+      width: 100%;
+    }
+    & > div:nth-child(4) {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+    .hero_contents {
+  width: 90%;
+
+}
+  .wrap_text {
+    width: 100%;
+  }
+  .hero_image {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    div {
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+  }
+  .section1 {
+    width: 90%;
+    margin: 60px auto;
+    h2 {
+      width: 100%;
+    }
+  }
+  .section2 {
+    & > div {
+      width: 100%;
+      padding-top: 40px;
+      height: 415px;
+      text-align: center;
+      border-left: 1px solid var(--white);
+      p {
+        margin: 50px 0;
+        margin-bottom: 100px;
+      }
+      div {
+        width: 80%;
+      }
+    }
+  }
+  .brands {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    justify-content: space-between;
+    div {
+      width: 25%;
+      margin-bottom: 40px;
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .brands_details {
+    padding-bottom: 60px;
+    & > .brands {
+      flex-wrap: wrap;
+      width: 85%;
+
+      padding: 45px 0;
+      div {
+        width: 45%;
+        margin-bottom: 30px;
+        svg {
+          width: 70%;
+        }
+      }
+      & div:nth-child(4) {
+        text-align: left;
+        width: 41%;
+
+        svg {
+          width: 41%;
+        }
+      }
+    }
+    .details {
+      width: 95%;
+      & > div {
+        width: 95%;
+        margin: 0 auto;
+        flex-direction: column;
+        padding-top: 50px;
+        & > div:nth-child(1) {
+          width: 100%;
+          text-align: center;
+        }
+        & > div:nth-child(2) {
+          width: 100%;
+        }
+      }
+      .control {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0;
+        flex-direction: row;
+        & > p {
+          width: 50%;
+          color: #989898;
+        }
+        & > div {
+          width: 50% !important;
+          margin: 0 auto;
+          //   text-align: initial;
+          svg {
+            margin-left: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .section5 {
+    padding: 50px 0;
+    padding-bottom: 20px;
+  }
+
+  .section7 {
+    margin: 10px auto;
+    h2 {
+      width: 100%;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      input {
+        font-size: 28px;
+        width: 97%;
+        padding-bottom: 20px;
+      }
+      .submit {
+        width: 29px;
+        height: 29px;
+        margin-top: -20px;
+      }
+    }
+  }
+
+  .our_team {
+    padding: 10px 0;
+    .card_wrapper {
+      & > div {
+        width: 48%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  footer {
+    padding: 20px 0;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & div {
+      margin-bottom: 30px;
+    }
+    & > div:nth-child(1) {
+      width: 100%;
+    }
+    & > div:nth-child(2) {
+      width: 100%;
+    }
+    & > div:nth-child(3) {
+      width: 100%;
+      flex-direction: column;
+    }
+    & > div:nth-child(4) {
+      width: 100%;
+    }
+  }
+}
