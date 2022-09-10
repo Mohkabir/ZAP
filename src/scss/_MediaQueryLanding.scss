@@ -13,7 +13,6 @@
     align-items: center;
   }
   .section2 {
-    // overflow-x: initial;
     width: 100%;
     & > div {
       width: 50%;
@@ -84,13 +83,6 @@
       }
     }
   }
-  //   .section6 {
-  //     padding-right: 20px;
-  //     & > div {
-  //       width: 190%;
-  //     }
-  //   }
-
   footer {
     padding: 80px 0;
     padding-bottom: 70px;
@@ -115,8 +107,20 @@
 }
 
 @media (max-width: 768px) {
+  .head {
+    padding: 20px 0;
+    .darkToggle {
+      width: 60px;
+      height: 28px;
+      border-width: 3px;
+      padding: 3px 6px;
+    }
+  }
+
   .hero_contents {
     width: 90%;
+  margin-top: 60%;
+
   }
   .wrap_text {
     width: 100%;
@@ -138,10 +142,8 @@
     }
   }
   .section2 {
-    // overflow-x: initial;
     width: 100%;
     & > div {
-      //   width: 50%;
       width: 100%;
       flex-wrap: wrap;
       flex-direction: column;
@@ -151,6 +153,18 @@
         text-align: center;
         border-left: 1px solid var(--white);
       }
+      & > div {
+        padding-top: 80px;
+        height: 495px;
+        p {
+          margin: 50px 0;
+          margin-bottom: 130px;
+        }
+        div {
+          width: 67%;
+          margin: 0 auto;
+        }
+      }
     }
   }
   .brands {
@@ -159,25 +173,59 @@
     padding: 50px 0;
     justify-content: space-between;
     div {
-      width: 25%;
+      width: 30%;
       margin-bottom: 40px;
       svg {
         width: 70%;
       }
     }
+    & > div:nth-child(3) {
+      svg {
+        width: 100%;
+      }
+    }
+    & > div:nth-child(4) {
+      text-align: left;
+    }
+    & > div:nth-child(7) {
+      svg {
+        width: 100%;
+      }
+    }
+    & > div:nth-child(8) {
+      text-align: left;
+    }
+    & > div:nth-child(11) {
+      svg {
+        width: 100%;
+      }
+    }
+    & > div:nth-child(12) {
+      text-align: left;
+    }
   }
   .brands_details {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     & > .brands {
       flex-wrap: wrap;
       width: 85%;
 
-      padding: 45px 0;
+      padding: 25px 0;
       div {
         width: 45%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         svg {
           width: 70%;
+        }
+      }
+      & div:nth-child(2) {
+        width: 42%;
+      }
+      & div:nth-child(3) {
+        width: 50%;
+
+        svg {
+          width: 100%;
         }
       }
       & div:nth-child(4) {
@@ -229,8 +277,9 @@
     }
   }
   .section5 {
-    padding: 50px 0;
-    padding-bottom: 20px;
+    padding: 0px 0;
+    padding-bottom: 0px;
+    margin-top: 60px;
   }
 
   .section6 {
@@ -271,9 +320,10 @@
 
   .our_team {
     padding: 10px 0;
+    flex-direction: column;
     .card_wrapper {
       & > div {
-        width: 48%;
+        width: 100%;
         margin-bottom: 20px;
       }
     }

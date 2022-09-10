@@ -37,7 +37,16 @@
     line-height: 30px;
   }
   .wrap_text {
-  width: 100%;
-}
+    width: 100%;
+  }
+  .loadingEffect {
+    width: 80%;
 
+    svg {
+      width: 250% !important;
+      height: 250% !important ;
+      margin: 0 auto;
+      animation: rotateLogo 3s ease-in-out;
+    }
+  }
 }

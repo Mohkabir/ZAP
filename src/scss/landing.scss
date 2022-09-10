@@ -11,7 +11,6 @@
     width: 66px;
     height: 34px;
     border-radius: 30px;
-    // border: 5px solid white;
     border-width: 5px;
     border-style: solid;
     display: flex;
@@ -23,7 +22,6 @@
       width: 10px;
       height: 10px;
       border-radius: 20px;
-      //   background-color: white;
     }
   }
 }
@@ -74,7 +72,6 @@
   }
 }
 .section2 {
-  //   overflow-x: scroll;
   & > div {
     display: flex;
     justify-content: space-between;
@@ -126,8 +123,6 @@
     }
     .light_mode {
       &:hover {
-        // background-position: center;
-        // background-size: cover;
         color: white;
       }
     }
@@ -153,9 +148,6 @@
   }
   & > div:nth-child(8) {
     text-align: right;
-    // img {
-    //   width: 70%;
-    // }
     svg {
       width: 70%;
     }
