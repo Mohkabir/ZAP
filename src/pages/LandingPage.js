@@ -18,8 +18,6 @@ const LandingPage = ({ themeToggle, issDarkMode }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  console.log(offsetY, "offsetY");
   return (
     <div>
       <Hero themeToggle={themeToggle} issDarkMode={issDarkMode} />
