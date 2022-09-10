@@ -3,19 +3,27 @@ import { Logo } from "../components/Icons";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
 
-const Hero = () => {
-  const [issDarkMode, setIssDarkMode] = useState(true);
-
+const Hero = ({ themeToggle, issDarkMode }) => {
+  const dark = {
+    borderColor: "white",
+    color: "white",
+    justifyContent: "flex-start",
+  };
+  const light = {
+    borderColor: "black",
+    color: "black",
+    justifyContent: "flex-end",
+  };
   return (
     <div>
       <div className="head wrapper">
-        <Logo />
+        <Logo color={issDarkMode ? "white" : "black"} />
         <div
           className="darkToggle"
-          style={{ justifyContent: issDarkMode ? "flex-start" : "flex-end" }}
-          onClick={() => setIssDarkMode(!issDarkMode)}
+          style={issDarkMode ? dark : light}
+          onClick={themeToggle}
         >
-          <span></span>
+          <span style={{ background: issDarkMode ? "white" : "black" }}></span>
         </div>
       </div>
 

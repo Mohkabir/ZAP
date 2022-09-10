@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
-const Section6 = () => {
+const Section6 = ({ offsetY }) => {
+    
+  const scrollRef = useRef();
+  const sectionPosition = 4652;
+  useEffect(() => {
+    if (offsetY > sectionPosition) {
+      let xAxisToScroll = offsetY - sectionPosition;
+      scrollRef.current.scrollLeft = xAxisToScroll;
+    }
+  }, [offsetY]);
+
   const datas = [
     {
       title: "Digital Strategy",
@@ -22,7 +32,7 @@ const Section6 = () => {
   ];
 
   return (
-    <div className="section6">
+    <div className="section6" ref={scrollRef}>
       <div>
         {datas.map((data, idx) => (
           <div className="card">

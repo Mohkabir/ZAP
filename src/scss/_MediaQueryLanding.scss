@@ -13,9 +13,15 @@
     align-items: center;
   }
   .section2 {
-    flex-wrap: wrap;
+    overflow-x: initial;
+    width: 100%;
     & > div {
       width: 50%;
+      width: 100%;
+      flex-wrap: wrap;
+      & > div {
+        width: 50%;
+      }
     }
   }
   .brands {
@@ -86,11 +92,9 @@
 }
 
 @media (max-width: 768px) {
-
-    .hero_contents {
-  width: 90%;
-
-}
+  .hero_contents {
+    width: 90%;
+  }
   .wrap_text {
     width: 100%;
   }
@@ -111,21 +115,66 @@
     }
   }
   .section2 {
+    overflow-x: initial;
+    width: 100%;
     & > div {
+      //   width: 50%;
       width: 100%;
-      padding-top: 40px;
-      height: 415px;
-      text-align: center;
-      border-left: 1px solid var(--white);
-      p {
-        margin: 50px 0;
-        margin-bottom: 100px;
-      }
-      div {
-        width: 80%;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      & > div {
+        width: 100%;
+        text-align: center;
+        border-left: 1px solid var(--white);
       }
     }
   }
+  //   .section2 {
+  //     flex-direction: column;
+  //     & > div {
+  //       width: 100%;
+  //       padding-top: 40px;
+  //       height: 415px;
+  //       text-align: center;
+  //       border-left: 1px solid var(--white);
+  //       p {
+  //         margin: 50px 0;
+  //         margin-bottom: 100px;
+  //       }
+  //       div {
+  //         width: 80%;
+  //       }
+  //     }
+  //     .section2 {
+  //       overflow-x: scroll;
+  //       & > div {
+  //         display: flex;
+  //         justify-content: space-between;
+  //         align-items: center;
+  //         width: 120%;
+  //         & > div {
+  //           width: 25%;
+  //           border-top: 1px solid var(--white);
+  //           border-bottom: 1px solid var(--white);
+  //           border-right: 1px solid var(--white);
+  //           padding-top: 80px;
+  //           background-position: center;
+  //           background-size: contain;
+  //           height: 695px;
+
+  //           div {
+  //             width: 67%;
+  //             margin: 0 auto;
+  //           }
+  //           &:hover {
+  //             background-position: center;
+  //             background-size: cover;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
   .brands {
     width: 90%;
     margin: 0 auto;

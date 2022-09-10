@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Brands from "../components/Brands";
 import BrandsDetails from "../components/BrandsDetails";
 import Footer from "../components/Footer";
@@ -10,10 +10,19 @@ import Section5 from "../components/Section5";
 import Section6 from "../components/Section6";
 import "../scss/landing.scss";
 
-const LandingPage = () => {
+const LandingPage = ({ themeToggle, issDarkMode }) => {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(offsetY, "offsetY");
   return (
     <div>
-      <Hero />
+      <Hero themeToggle={themeToggle} issDarkMode={issDarkMode} />
       <div className="section1">
         <h2>
           We work close with our clients and help them find their natural voice
@@ -21,11 +30,11 @@ const LandingPage = () => {
           the smallest <span className="primary_text">design</span> detail.
         </h2>
       </div>
-      <Section2 />
-      <Brands />
+      <Section2 offsetY={offsetY} issDarkMode={issDarkMode} />
+      <Brands issDarkMode={issDarkMode} />
       <BrandsDetails />
       <Section5 />
-      <Section6 />
+      <Section6 offsetY={offsetY} />
       <OurTeam />
 
       <div className="section7 wrapper">
@@ -33,14 +42,14 @@ const LandingPage = () => {
           This is the part where you get in touch and we make amazing things
           happen
         </h2>
-        <div>
+        <div className={`${issDarkMode ? "inputDark" : "inputLight"}`}>
           <input type="text" placeholder="your@email.com" />
           <div className="submit">
-            <ShortArrowRight color="white" />
+            <ShortArrowRight color={issDarkMode ? "white" : "black"} />
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer issDarkMode={issDarkMode} />
     </div>
   );
 };

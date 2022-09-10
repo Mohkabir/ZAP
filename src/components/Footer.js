@@ -1,11 +1,11 @@
 import React from "react";
 import { FullLogo } from "./Icons";
 
-const Footer = () => {
+const Footer = ({ issDarkMode }) => {
   return (
     <footer className="wrapper">
       <div>
-        <FullLogo />
+        <FullLogo color={issDarkMode ? "white" : "black"} />
       </div>
       <div>
         <span>
@@ -13,7 +13,7 @@ const Footer = () => {
           Layout, <br /> Thinkers Corner, Enugu
         </span>
       </div>
-      <div>
+      <div className={`${issDarkMode ?"darkLink": "lightLink" }`}>
         <a href="">Instagram</a>
         <a href="">LinkedIn</a>
         <a href="">Facebook</a>

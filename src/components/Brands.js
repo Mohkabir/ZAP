@@ -1,63 +1,59 @@
 import React from "react";
-import altschool from "../assets/images/altschool.svg";
-import betnaija from "../assets/images/betnaija.svg";
-import talentql from "../assets/images/talentql.svg";
-import aero from "../assets/images/aero.svg";
-import uba from "../assets/images/uba.svg";
-import barter from "../assets/images/barter.svg";
-import flutterwave from "../assets/images/flutterwave.svg";
-import opera from "../assets/images/opera.svg";
-import betway from "../assets/images/betway.svg";
-import konga from "../assets/images/konga.svg";
-import relianceHmo from "../assets/images/relianceHmo.svg";
-import peak from "../assets/images/peak.svg";
+import {
+  Aero,
+  Altschool,
+  Barter,
+  Betnaija,
+  Betway,
+  Flutterwave,
+  Konga,
+  Opera,
+  Peak,
+  RelianceHmo,
+  Talentql,
+  Uba,
+} from "./Icons";
 
-const Brands = () => {
-  const brands = [
-    {
-      image: altschool,
-    },
-    {
-      image: betnaija,
-    },
-    {
-      image: talentql,
-    },
-    {
-      image: aero,
-    },
-    {
-      image: uba,
-    },
-    {
-      image: barter,
-    },
-    {
-      image: flutterwave,
-    },
-    {
-      image: opera,
-    },
-    {
-      image: betway,
-    },
-    {
-      image: konga,
-    },
-    {
-      image: relianceHmo,
-    },
-    {
-      image: peak,
-    },
-  ];
+const Brands = ({ issDarkMode }) => {
+  const color = issDarkMode ? "white" : "black";
   return (
     <div className="brands">
-      {brands.map((brand, idx) => (
-        <div key={idx}>
-          <img src={brand.image} alt="brands image" />
-        </div>
-      ))}
+      <div>
+        <Altschool color={color} />
+      </div>
+      <div>
+        <Betnaija color={color} />
+      </div>
+      <div>
+        <Talentql color={color} />
+      </div>
+      <div>
+        <Aero color={color} />
+      </div>
+      <div>
+        <Uba color={color} />
+      </div>
+      <div>
+        <Barter color={color} />
+      </div>
+      <div>
+        <Flutterwave color={color} />
+      </div>
+      <div>
+        <Opera color={color} />
+      </div>
+      <div>
+        <Betway color={color} />
+      </div>
+      <div>
+        <Konga color={color} />
+      </div>
+      <div>
+        <RelianceHmo color={color} />
+      </div>
+      <div>
+        <Peak color={color} issDarkMode={issDarkMode} />
+      </div>
     </div>
   );
 };
