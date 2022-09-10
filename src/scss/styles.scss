@@ -12,6 +12,9 @@
   --primaryHovered: #866711;
 }
 
+body{
+    transition: all 500ms ease-in-out;
+}
 @font-face {
   font-family: Raleway;
   src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");

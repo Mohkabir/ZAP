@@ -13,7 +13,7 @@
     align-items: center;
   }
   .section2 {
-    overflow-x: initial;
+    // overflow-x: initial;
     width: 100%;
     & > div {
       width: 50%;
@@ -27,11 +27,34 @@
   .brands {
     width: 90%;
   }
+
   .section6 {
+    overflow-x: scroll;
+    padding: 0px;
+    width: 90%;
+    margin: 0 auto;
     & > div {
-      width: 140%;
+      align-items: flex-start;
+      width: 100%;
+      flex-wrap: wrap;
+      .card {
+        width: 45%;
+        div {
+          width: 100%;
+        }
+      }
+      .card:nth-child(3) {
+        width: 45%;
+        p {
+          width: 100%;
+        }
+      }
+      .card:nth-child(4) {
+        width: 45%;
+      }
     }
   }
+
   .section7 {
     margin: 60px auto;
     h2 {
@@ -61,12 +84,12 @@
       }
     }
   }
-  .section6 {
-    padding-right: 20px;
-    & > div {
-      width: 190%;
-    }
-  }
+  //   .section6 {
+  //     padding-right: 20px;
+  //     & > div {
+  //       width: 190%;
+  //     }
+  //   }
 
   footer {
     padding: 80px 0;
@@ -115,7 +138,7 @@
     }
   }
   .section2 {
-    overflow-x: initial;
+    // overflow-x: initial;
     width: 100%;
     & > div {
       //   width: 50%;
@@ -130,51 +153,6 @@
       }
     }
   }
-  //   .section2 {
-  //     flex-direction: column;
-  //     & > div {
-  //       width: 100%;
-  //       padding-top: 40px;
-  //       height: 415px;
-  //       text-align: center;
-  //       border-left: 1px solid var(--white);
-  //       p {
-  //         margin: 50px 0;
-  //         margin-bottom: 100px;
-  //       }
-  //       div {
-  //         width: 80%;
-  //       }
-  //     }
-  //     .section2 {
-  //       overflow-x: scroll;
-  //       & > div {
-  //         display: flex;
-  //         justify-content: space-between;
-  //         align-items: center;
-  //         width: 120%;
-  //         & > div {
-  //           width: 25%;
-  //           border-top: 1px solid var(--white);
-  //           border-bottom: 1px solid var(--white);
-  //           border-right: 1px solid var(--white);
-  //           padding-top: 80px;
-  //           background-position: center;
-  //           background-size: contain;
-  //           height: 695px;
-
-  //           div {
-  //             width: 67%;
-  //             margin: 0 auto;
-  //           }
-  //           &:hover {
-  //             background-position: center;
-  //             background-size: cover;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
   .brands {
     width: 90%;
     margin: 0 auto;
@@ -183,7 +161,7 @@
     div {
       width: 25%;
       margin-bottom: 40px;
-      img {
+      svg {
         width: 70%;
       }
     }
@@ -253,6 +231,21 @@
   .section5 {
     padding: 50px 0;
     padding-bottom: 20px;
+  }
+
+  .section6 {
+    & > div {
+      flex-direction: column;
+      .card {
+        width: 100%;
+      }
+      .card:nth-child(3) {
+        width: 100%;
+      }
+      .card:nth-child(4) {
+        width: 100%;
+      }
+    }
   }
 
   .section7 {

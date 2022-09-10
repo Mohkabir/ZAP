@@ -34,9 +34,10 @@ const LandingPage = ({ themeToggle, issDarkMode }) => {
       <Brands issDarkMode={issDarkMode} />
       <BrandsDetails />
       <Section5 />
+     
+      
       <Section6 offsetY={offsetY} />
       <OurTeam />
-
       <div className="section7 wrapper">
         <h2>
           This is the part where you get in touch and we make amazing things
