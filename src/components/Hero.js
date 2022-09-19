@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Logo } from "../components/Icons";
-import image1 from "../assets/images/image1.png";
-import image2 from "../assets/images/image2.png";
 
 const Hero = ({ themeToggle, issDarkMode }) => {
   const dark = {
@@ -37,16 +35,6 @@ const Hero = ({ themeToggle, issDarkMode }) => {
             We work closley with our clients to truly understand who they are,
             who they are speaking to, and what they want to say.
           </p>
-        </div>
-        <div className="hero_image">
-          <div>
-            <img src={image1} alt="" />
-            <a href="#"></a>
-          </div>
-          <div>
-            <img src={image2} alt="" />
-            <a href="#"></a>
-          </div>
         </div>
       </div>
     </div>

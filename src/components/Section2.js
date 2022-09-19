@@ -1,5 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import images3 from "../assets/images/images3.png";
+import case1 from "../assets/images/case1.png";
+import case2 from "../assets/images/case2.png";
+import case3 from "../assets/images/case3.png";
+import case4 from "../assets/images/case4.png";
+import case5 from "../assets/images/case5.png";
 
 const Section2 = ({ offsetY, issDarkMode }) => {
   const scrollRef = useRef();
@@ -18,28 +23,34 @@ const Section2 = ({ offsetY, issDarkMode }) => {
 
   const section2Data = [
     {
-      title: "Cubana Group",
-      text: "Palatial ecstatic hospitality brand",
+      title: "Forric",
+      text: "High quality ICT solutions you can trust",
       url: "#",
-      bg: images3,
+      bg: case1,
     },
     {
       title: "Rewind",
       text: "Exclusive indoor and outdoor lounge",
       url: "#",
-      bg: images3,
+      bg: case2,
     },
     {
-      title: "WaterRock",
-      text: "Largest brick and stone tiles manufacturer",
+      title: "Compoundcapital",
+      text: "Deals financing platform for Africans powered by Syndicates.",
       url: "#",
-      bg: images3,
+      bg: case3,
     },
     {
       title: "Luxistt",
       text: "Serenity away from home in apartments",
       url: "#",
-      bg: images3,
+      bg: case4,
+    },
+    {
+      title: "Cubana group",
+      text: "Palatial ecstatic hospitality brand",
+      url: "#",
+      bg: case5,
     },
   ];
   return (
