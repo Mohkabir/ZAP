@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import images3 from "../assets/images/images3.png";
+import { Link } from "react-router-dom"
 import case1 from "../assets/images/case1.png";
 import case2 from "../assets/images/case2.png";
 import case3 from "../assets/images/case3.png";
@@ -25,31 +25,31 @@ const Section2 = ({ offsetY, issDarkMode }) => {
     {
       title: "Forric",
       text: "High quality ICT solutions you can trust",
-      url: "#",
+      url: "/forric",
       bg: case1,
     },
     {
-      title: "Rewind",
+      title: "Nox",
       text: "Exclusive indoor and outdoor lounge",
-      url: "#",
+      url: "/nox",
       bg: case2,
     },
     {
       title: "Compoundcapital",
       text: "Deals financing platform for Africans powered by Syndicates.",
-      url: "#",
+      url: "/compound-capital",
       bg: case3,
     },
     {
       title: "Luxistt",
       text: "Serenity away from home in apartments",
-      url: "#",
+      url: "/luxistt",
       bg: case4,
     },
     {
       title: "Cubana group",
       text: "Palatial ecstatic hospitality brand",
-      url: "#",
+      url: "/cubana-group",
       bg: case5,
     },
   ];
@@ -67,7 +67,7 @@ const Section2 = ({ offsetY, issDarkMode }) => {
             <div style={{ borderColor: issDarkMode ? "white" : "black" }}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <a href={item.url}>View case study</a>
+              <Link to={item.url}>View case study</Link>
             </div>
           </div>
         ))}

@@ -6,7 +6,11 @@ import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import { Helmet } from "react-helmet";
 import { Logo } from "./components/Icons";
-import CaseOne from "./pages/CaseOne";
+import Nox from "./pages/Nox";
+import Forric from "./pages/Forric";
+import CompountCapital from "./pages/CompoundCapital";
+import CubanaGroup from "./pages/CubanaGroup";
+import Luxistt from "./pages/Luxistt";
 
 function App() {
   const [loading, setloading] = useState(true);
@@ -47,18 +51,64 @@ function App() {
               <PageLayout issDarkMode={issDarkMode}>
                 {!loading && (
                   <LandingPage
-                  themeToggle={themeToggle}
-                  issDarkMode={issDarkMode}
+                    themeToggle={themeToggle}
+                    issDarkMode={issDarkMode}
                   />
                 )}
               </PageLayout>
             }
           />
           <Route
-            path="/case-study"
+            path="/nox"
             element={
               <PageLayout issDarkMode={issDarkMode}>
-                <CaseOne themeToggle={themeToggle} issDarkMode={issDarkMode} />
+                <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/forric"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/compound-capital"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                <CompountCapital
+                  themeToggle={themeToggle}
+                  issDarkMode={issDarkMode}
+                />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/forric"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/luxistt"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                <Luxistt themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/cubana-group"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                <CubanaGroup
+                  themeToggle={themeToggle}
+                  issDarkMode={issDarkMode}
+                />
               </PageLayout>
             }
           />
