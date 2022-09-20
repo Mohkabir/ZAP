@@ -125,7 +125,7 @@ function App() {
                 </PageLayout>
               }
             />
-      
+
             <Route
               path="/cubana-group"
               element={

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useParallax } from "react-scroll-parallax";
+import "../scss/styles.scss"
 
 const Test = () => {
   //   const ref = useRef(null);
@@ -39,7 +40,7 @@ const Test = () => {
           pariatur iusto consequuntur dolorem. Aliquid, soluta culpa incidunt
           recusandae velit amet repudiandae.
         </p>
-        <p>
+        <p className="sticky">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa in
           explicabo perferendis, tempora sapiente odio corporis temporibus autem
           pariatur iusto consequuntur dolorem. Aliquid, soluta culpa incidunt
@@ -81,7 +82,14 @@ const Test = () => {
           pariatur iusto consequuntur dolorem. Aliquid, soluta culpa incidunt
           recusandae velit amet repudiandae.
         </p>
-        <div ref={pRef} style={{ height: "100vh", border: "2px solid red", overflowX:"hidden" }}>
+        <div
+          ref={pRef}
+          style={{
+            height: "100vh",
+            border: "2px solid red",
+            overflowX: "hidden",
+          }}
+        >
           <h1>THIS IS THE BEGGENING</h1>
 
           <div

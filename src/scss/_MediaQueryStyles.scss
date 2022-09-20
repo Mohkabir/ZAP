@@ -5,6 +5,19 @@
   .wrap_text {
     width: 90%;
   }
+
+  .beforeSticky {
+    height: initial;
+    position: initial;
+  }
+  .sticky {
+    position: static;
+  }
+  .beforeSticky2 {
+    height: 1600px;
+    height: initial;
+    position: relative;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -19,7 +32,7 @@
     line-height: 51px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 42px;
   }
   h3 {

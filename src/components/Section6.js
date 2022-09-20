@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Section6 = ({ offsetY }) => {
   const scrollRef = useRef();
-  const sectionPosition = 4652;
+console.log(offsetY, "offsetY");
+  const sectionPosition = 3246;
   useEffect(() => {
     if (offsetY > sectionPosition) {
       let xAxisToScroll = offsetY - sectionPosition;
@@ -34,7 +35,7 @@ const Section6 = ({ offsetY }) => {
   ];
 
   return (
-    <div className="section6" ref={scrollRef}>
+    <div className="section6">
       <div className="box_wrapper">
         <div className="box1">
           <h2>
@@ -42,7 +43,7 @@ const Section6 = ({ offsetY }) => {
             thousands every single day.
           </h2>
         </div>
-        <div className="box2">
+        <div className="box2" ref={scrollRef}>
           <div className="card_wrapper">
             {datas.map((data, idx) => (
               <div className="card">
