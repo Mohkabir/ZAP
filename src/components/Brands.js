@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Aero,
-  Altschool,
+  Lenece,
   Barter,
   Betnaija,
   Betway,
@@ -12,6 +12,17 @@ import {
   RelianceHmo,
   Talentql,
   Uba,
+  Cubana,
+  CompoundCapital,
+  VillageBistre,
+  Trube,
+  HazonTech,
+  LuxyryPlace,
+  Genesys,
+  Forric,
+  Newisst,
+  Medvue,
+  Nox,
 } from "./Icons";
 
 const Brands = ({ issDarkMode }) => {
@@ -19,40 +30,41 @@ const Brands = ({ issDarkMode }) => {
   return (
     <div className="brands">
       <div>
-        <Altschool color={color} />
+        <Lenece color={color} />
       </div>
       <div>
-        <Betnaija color={color} />
+        <Cubana color={color} />
       </div>
       <div>
-        <Talentql color={color} />
+        <CompoundCapital color={color} />
       </div>
       <div>
-        <Aero color={color} />
+        <VillageBistre color={color} />
       </div>
       <div>
-        <Uba color={color} />
+        <Trube color={color} />
       </div>
       <div>
-        <Barter color={color} />
+        <Nox color={color} />
       </div>
       <div>
-        <Flutterwave color={color} />
+        <HazonTech color={color} />
       </div>
       <div>
-        <Opera color={color} />
+        <LuxyryPlace color={color} />
       </div>
       <div>
-        <Betway color={color} />
+        <Genesys color={color} />
       </div>
       <div>
-        <Konga color={color} />
+        <Forric color={color} />
+      </div>
+
+      <div>
+        <Newisst color={color} />
       </div>
       <div>
-        <RelianceHmo color={color} />
-      </div>
-      <div>
-        <Peak color={color} issDarkMode={issDarkMode} />
+        <Medvue color={color} />
       </div>
     </div>
   );
