@@ -65,7 +65,13 @@ function App() {
             <Route
               path="/nox"
               element={
-                <PageLayout issDarkMode={issDarkMode}>
+                <PageLayout
+                  issDarkMode={issDarkMode}
+                  footerColour={{
+                    background: "black",
+                    color: "white",
+                  }}
+                >
                   <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
                 </PageLayout>
               }
@@ -73,7 +79,13 @@ function App() {
             <Route
               path="/forric"
               element={
-                <PageLayout issDarkMode={issDarkMode}>
+                <PageLayout
+                  issDarkMode={issDarkMode}
+                  footerColour={{
+                    background: "white",
+                    color: "black",
+                  }}
+                >
                   <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
                 </PageLayout>
               }
@@ -81,7 +93,13 @@ function App() {
             <Route
               path="/compound-capital"
               element={
-                <PageLayout issDarkMode={issDarkMode}>
+                <PageLayout
+                  issDarkMode={issDarkMode}
+                  footerColour={{
+                    background: "white",
+                    color: "black",
+                  }}
+                >
                   <CompountCapital
                     themeToggle={themeToggle}
                     issDarkMode={issDarkMode}
@@ -89,18 +107,17 @@ function App() {
                 </PageLayout>
               }
             />
-            <Route
-              path="/forric"
-              element={
-                <PageLayout issDarkMode={issDarkMode}>
-                  <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
-                </PageLayout>
-              }
-            />
+
             <Route
               path="/luxistt"
               element={
-                <PageLayout issDarkMode={issDarkMode}>
+                <PageLayout
+                  issDarkMode={issDarkMode}
+                  footerColour={{
+                    background: "#14665E",
+                    color: "white",
+                  }}
+                >
                   <Luxistt
                     themeToggle={themeToggle}
                     issDarkMode={issDarkMode}
@@ -108,10 +125,17 @@ function App() {
                 </PageLayout>
               }
             />
+      
             <Route
               path="/cubana-group"
               element={
-                <PageLayout issDarkMode={issDarkMode}>
+                <PageLayout
+                  issDarkMode={issDarkMode}
+                  footerColour={{
+                    background: "black",
+                    color: "white",
+                  }}
+                >
                   <CubanaGroup
                     themeToggle={themeToggle}
                     issDarkMode={issDarkMode}
@@ -119,12 +143,7 @@ function App() {
                 </PageLayout>
               }
             />
-            <Route
-              path="/test"
-              element={
-               <Test />
-              }
-            />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </div>
       </BrowserRouter>

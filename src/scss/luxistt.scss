@@ -1,0 +1,25 @@
+.luxistt {
+  background-color: white;
+}
+
+.luxisttHero {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: -300px;
+}
+
+.luxisttsContents {
+  height: 400px;
+  background-color: #14665e;
+}
+
+@media (max-width: 768px) {
+  .luxisttHero {
+    margin-bottom: -100px;
+  }
+
+  .luxisttsContents {
+    height: 150px;
+    background-color: #14665e;
+  }
+}

@@ -16,7 +16,7 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   const caseStudyWrapper = useRef(null);
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

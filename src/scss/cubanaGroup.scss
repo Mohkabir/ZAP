@@ -1,0 +1,29 @@
+.cubanaHero {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: -300px;
+  img {
+    border: 1px solid white;
+  }
+  p {
+    margin-top: 40px;
+    letter-spacing: 0.435em;
+  }
+}
+
+.cubanaContents {
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .cubana {
+  }
+  .cubanaHero {
+    margin-bottom: -100px;
+    width: 90%;
+  }
+
+  .cubanaContents {
+    height: 150px;
+  }
+}

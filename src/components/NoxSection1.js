@@ -11,11 +11,21 @@ const NoxSection1 = () => {
       </p>
       <p className="style">style 1</p>
       <div className="box1">
-        <NoxOne />
-        <RightCaret />
-        <NoxThree />
-        <RightCaret />
-        <NoxTwo />
+        <span>
+          <NoxOne />
+        </span>
+        <span>
+          <RightCaret />
+        </span>
+        <span>
+          <NoxThree />
+        </span>
+        <span>
+          <RightCaret />
+        </span>
+        <span>
+          <NoxTwo />
+        </span>
       </div>
       <div className="box2">
         <p>

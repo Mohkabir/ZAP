@@ -1,5 +1,5 @@
 import React from "react";
-import { Approved, NoxLog2, ZeroTwo } from "./Icons";
+import { Approved, NoxLog2, NoxLog3, ZeroTwo } from "./Icons";
 import Nox1 from "../assets/images/noxImage1.png";
 import Nox2 from "../assets/images/noxImage2.png";
 import Nox3 from "../assets/images/noxImage3.png";
@@ -30,7 +30,10 @@ const NoxSection2 = () => {
         </div>
       </div>
       <div>
-        <p>Style 3</p>
+        <p className="head3">Style 3</p>
+        <div className="head3Logo">
+          <NoxLog3 />
+        </div>
         <div>
           <img src={Nox3} alt="" />
           <img src={Nox4} alt="" />
