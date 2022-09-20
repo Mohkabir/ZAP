@@ -39,13 +39,20 @@
     }
   }
 }
+.case_hero_contents {
+  margin-top: 10%;
+}
 
 .section1 {
   width: 90%;
   margin: 120px auto;
 }
 .section2 {
+  position: sticky !important;
+  top: 0;
   overflow-x: scroll;
+  // border: 2px solid red;
+
   & > div {
     display: flex;
     justify-content: space-between;
@@ -252,8 +259,8 @@
   }
 }
 
-.footer{
-  border-top: 1px solid rgba(255, 255, 255,0.7);
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
 }
 footer {
   display: flex;

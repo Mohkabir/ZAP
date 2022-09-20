@@ -8,6 +8,8 @@ const CaseStudyHero = ({
   title,
   heading,
   heading2,
+  bg,
+  color,
 }) => {
   const dark = {
     borderColor: "white",
@@ -20,25 +22,28 @@ const CaseStudyHero = ({
     justifyContent: "flex-end",
   };
   return (
-    <div className="caseStudyHero">
+    <div
+      className="caseStudyHero"
+      style={{ background: bg && bg, color: color && color }}
+    >
       <div className="head wrapper">
         <Link to="/">
-          <Logo color={issDarkMode ? "white" : "black"} />
+          <Logo color={color ? "black" : issDarkMode ? "white" : "black"} />
         </Link>
 
-        <div
+        {/* <div
           className="darkToggle"
           style={issDarkMode ? dark : light}
           onClick={themeToggle}
         >
           <span style={{ background: issDarkMode ? "white" : "black" }}></span>
-        </div>
+        </div> */}
       </div>
-      <div className="hero_contents">
+      <div className="hero_contents case_hero_contents">
         <div className="wrap_text">
           <span>{title} -</span>
           <h1>
-            {heading} <span style={{ color: "#111111" }}>{heading2}</span>
+            {heading} <span style={{ color: "#292929" }}>{heading2}</span>
           </h1>
         </div>
       </div>

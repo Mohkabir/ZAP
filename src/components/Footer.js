@@ -1,12 +1,21 @@
 import React from "react";
 import { FullLogo } from "./Icons";
 
-const Footer = ({ issDarkMode }) => {
+const Footer = ({ issDarkMode, footerColour }) => {
+  console.log(footerColour, "footerColour");
   return (
-    <div className="footer">
+    <div className="footer" style={footerColour && footerColour}>
       <footer className="wrapper">
         <div>
-          <FullLogo color={issDarkMode ? "white" : "black"} />
+          <FullLogo
+            color={
+              footerColour?.color
+                ? footerColour.color
+                : issDarkMode
+                ? "white"
+                : "black"
+            }
+          />
         </div>
         <div>
           <span>
@@ -15,11 +24,36 @@ const Footer = ({ issDarkMode }) => {
           </span>
         </div>
         <div className={`${issDarkMode ? "darkLink" : "lightLink"}`}>
-          <a href="">Instagram</a>
-          <a href="">LinkedIn</a>
-          <a href="">Facebook</a>
-          <a href="">Twitter</a>
-          <a href="">Youtube</a>
+          <a
+            href=""
+            style={{ color: footerColour?.color && footerColour.color }}
+          >
+            Instagram
+          </a>
+          <a
+            href=""
+            style={{ color: footerColour?.color && footerColour.color }}
+          >
+            LinkedIn
+          </a>
+          <a
+            href=""
+            style={{ color: footerColour?.color && footerColour.color }}
+          >
+            Facebook
+          </a>
+          <a
+            href=""
+            style={{ color: footerColour?.color && footerColour.color }}
+          >
+            Twitter
+          </a>
+          <a
+            href=""
+            style={{ color: footerColour?.color && footerColour.color }}
+          >
+            Youtube
+          </a>
         </div>
         <div>
           <p>All rights reserved</p>

@@ -6,6 +6,10 @@
     margin: auto;
     margin-top: 17%;
   }
+  .case_hero_contents {
+    margin-top: 5%;
+  }
+
   .section2 {
     overflow-x: initial;
     & > div {
@@ -21,9 +25,9 @@
     div {
       width: 25%;
     }
-      svg {
-        width: 80%;
-      }
+    svg {
+      width: 80%;
+    }
   }
   .section6 {
     padding: 0 60px;
@@ -75,7 +79,7 @@
   .wrap_text {
     width: 100%;
   }
-   .section6 {
+  .section6 {
     padding: 0 60px;
     width: 100%;
 
@@ -141,6 +145,10 @@
     width: 90%;
     margin-top: 60%;
   }
+  .case_hero_contents {
+    margin-top: 10%;
+  }
+
   .wrap_text {
     width: 100%;
   }

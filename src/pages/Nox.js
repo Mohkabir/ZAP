@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CaseStudyHero from "../components/CaseStudyHero";
 import { ZeroOne } from "../components/Icons";
 import NoxSection1 from "../components/NoxSection1";
 import NoxSection2 from "../components/NoxSection2";
 import NoxSection3 from "../components/NoxSection3";
+import { scrollTop } from "../helpers";
+
 import "../scss/nox.scss";
 
 const Nox = ({ themeToggle, issDarkMode }) => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
+
   return (
-    <div>
+    <div className="nox">
       <CaseStudyHero
         themeToggle={themeToggle}
         issDarkMode={issDarkMode}
@@ -17,7 +23,7 @@ const Nox = ({ themeToggle, issDarkMode }) => {
         heading2="is the tag line for this holistic brand"
       />
       <div className="noxhero">
-        <ZeroOne />
+        <span>01</span>
       </div>
       <NoxSection1 />
       <NoxSection2 />
