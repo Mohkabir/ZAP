@@ -5,6 +5,7 @@ import Nox2 from "../assets/images/noxImage2.png";
 import Nox3 from "../assets/images/noxImage3.png";
 import Nox4 from "../assets/images/noxImage4.png";
 
+
 const NoxSection2 = () => {
   return (
     <div className="noxSection2">

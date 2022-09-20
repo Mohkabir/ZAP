@@ -1,8 +1,8 @@
 import React from "react";
 import CaseStudyHero from "../components/CaseStudyHero";
 
-const Luxistt
- = ({ themeToggle, issDarkMode }) => {
+
+const Luxistt = ({ themeToggle, issDarkMode }) => {
   return (
     <div>
       <CaseStudyHero
@@ -17,5 +17,4 @@ s"
   );
 };
 
-export default Luxistt
-;
+export default Luxistt;

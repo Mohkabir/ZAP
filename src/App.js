@@ -12,6 +12,9 @@ import CompountCapital from "./pages/CompoundCapital";
 import CubanaGroup from "./pages/CubanaGroup";
 import Luxistt from "./pages/Luxistt";
 
+import { ParallaxProvider } from "react-scroll-parallax";
+import Test from "./pages/Test";
+
 function App() {
   const [loading, setloading] = useState(true);
   useEffect(() => {
@@ -36,85 +39,96 @@ function App() {
     );
   }
   return (
-    <BrowserRouter>
-      <div className="global_container">
-        <Helmet>
-          <style>{`body{background : ${
-            issDarkMode ? "black" : "white"
-          }; color: ${issDarkMode ? "white" : "black"}}`}</style>
-        </Helmet>
+    <ParallaxProvider>
+      <BrowserRouter>
+        <div className="global_container">
+          <Helmet>
+            <style>{`body{background : ${
+              issDarkMode ? "black" : "white"
+            }; color: ${issDarkMode ? "white" : "black"}}`}</style>
+          </Helmet>
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                {!loading && (
-                  <LandingPage
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  {!loading && (
+                    <LandingPage
+                      themeToggle={themeToggle}
+                      issDarkMode={issDarkMode}
+                    />
+                  )}
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/nox"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/forric"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/compound-capital"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <CompountCapital
                     themeToggle={themeToggle}
                     issDarkMode={issDarkMode}
                   />
-                )}
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/nox"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/forric"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/compound-capital"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <CompountCapital
-                  themeToggle={themeToggle}
-                  issDarkMode={issDarkMode}
-                />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/forric"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/luxistt"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <Luxistt themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/cubana-group"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                <CubanaGroup
-                  themeToggle={themeToggle}
-                  issDarkMode={issDarkMode}
-                />
-              </PageLayout>
-            }
-          />
-        </Routes>
-      </div>
-    </BrowserRouter>
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/forric"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/luxistt"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <Luxistt
+                    themeToggle={themeToggle}
+                    issDarkMode={issDarkMode}
+                  />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/cubana-group"
+              element={
+                <PageLayout issDarkMode={issDarkMode}>
+                  <CubanaGroup
+                    themeToggle={themeToggle}
+                    issDarkMode={issDarkMode}
+                  />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/test"
+              element={
+               <Test />
+              }
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </ParallaxProvider>
   );
 }
 

@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useParallax } from "react-scroll-parallax";
+
 import Brands from "../components/Brands";
 // import BrandsDetails from "../components/BrandsDetails";
 import Hero from "../components/Hero";
@@ -13,14 +15,32 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
+  const caseStudyWrapper = useRef(null);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const caseStudy = useParallax({
+    ref: caseStudyWrapper,
+    easing: [1, -0.75, 0.5, 1.34],
+    // translateX: [-5, -60],
+    controller: null,
+    element: Element | undefined,
+  });
+
   return (
     <div>
       <Hero themeToggle={themeToggle} issDarkMode={issDarkMode} />
-      <Section2 offsetY={offsetY} issDarkMode={issDarkMode} />
+      <div>
+        <Section2
+          offsetY={offsetY}
+          issDarkMode={issDarkMode}
+          caseStudyRef={caseStudy.ref}
+          targetRef={caseStudyWrapper}
+        />
+      </div>
       <div className="section1">
         <h2>
           We work close with our clients and help them find their natural voice
