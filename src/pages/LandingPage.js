@@ -15,31 +15,18 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  const caseStudyWrapper = useRef(null);
-  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const caseStudy = useParallax({
-    ref: caseStudyWrapper,
-    easing: [1, -0.75, 0.5, 1.34],
-    // translateX: [-5, -60],
-    controller: null,
-    element: Element | undefined,
-  });
-
   return (
     <div>
       <Hero themeToggle={themeToggle} issDarkMode={issDarkMode} />
-      <div>
-        <Section2
-          offsetY={offsetY}
-          issDarkMode={issDarkMode}
-          caseStudyRef={caseStudy.ref}
-          targetRef={caseStudyWrapper}
-        />
+      <div className="beforeSticky">
+        <div className="sticky">
+          <Section2 offsetY={offsetY} issDarkMode={issDarkMode} />
+        </div>
       </div>
       <div className="section1">
         <h2>
@@ -49,7 +36,13 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
         </h2>
       </div>
       <Brands issDarkMode={issDarkMode} />
-      <Section6 offsetY={offsetY} />
+
+      <div className="beforeSticky2">
+        <div className="sticky">
+          <Section6 offsetY={offsetY} />
+        </div>
+      </div>
+
       <div className="wrapper singleImage">
         <img src={singleImage1} alt="" />
       </div>

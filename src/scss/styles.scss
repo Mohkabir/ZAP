@@ -144,8 +144,17 @@ p {
   background-color: var(--white);
   color: var(--black);
 }
-.text_theme {
-  //   color: var(--black);
-}
 
+.beforeSticky {
+  height: 1500px;
+  position: relative;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.beforeSticky2 {
+  height: 1600px;
+  position: relative;
+}
 @import "./MediaQueryStyles.scss";

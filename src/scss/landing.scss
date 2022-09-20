@@ -31,7 +31,6 @@
   margin-right: 0;
   margin-left: auto;
   margin-top: 20%;
-
   .wrap_text {
     margin-bottom: 50px;
     h1 {
@@ -48,11 +47,8 @@
   margin: 120px auto;
 }
 .section2 {
-  position: sticky !important;
   top: 0;
   overflow-x: scroll;
-  // border: 2px solid red;
-
   & > div {
     display: flex;
     justify-content: space-between;
@@ -142,7 +138,6 @@
     .box2 {
       width: 53%;
       overflow-x: scroll;
-
       .card_wrapper {
         display: flex;
         justify-content: space-between;
