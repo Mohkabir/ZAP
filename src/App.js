@@ -12,9 +12,6 @@ import CompountCapital from "./pages/CompoundCapital";
 import CubanaGroup from "./pages/CubanaGroup";
 import Luxistt from "./pages/Luxistt";
 
-import { ParallaxProvider } from "react-scroll-parallax";
-import Test from "./pages/Test";
-
 function App() {
   const [loading, setloading] = useState(true);
   useEffect(() => {
@@ -39,115 +36,109 @@ function App() {
     );
   }
   return (
-    <ParallaxProvider>
-      <BrowserRouter>
-        <div className="global_container">
-          <Helmet>
-            <style>{`body{background : ${
-              issDarkMode ? "black" : "white"
-            }; color: ${issDarkMode ? "white" : "black"}}`}</style>
-          </Helmet>
+    <BrowserRouter>
+      <div className="global_container">
+        <Helmet>
+          <style>{`body{background : ${
+            issDarkMode ? "black" : "white"
+          }; color: ${issDarkMode ? "white" : "black"}}`}</style>
+        </Helmet>
 
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <PageLayout issDarkMode={issDarkMode}>
-                  {!loading && (
-                    <LandingPage
-                      themeToggle={themeToggle}
-                      issDarkMode={issDarkMode}
-                    />
-                  )}
-                </PageLayout>
-              }
-            />
-            <Route
-              path="/nox"
-              element={
-                <PageLayout
-                  issDarkMode={issDarkMode}
-                  footerColour={{
-                    background: "black",
-                    color: "white",
-                  }}
-                >
-                  <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
-                </PageLayout>
-              }
-            />
-            <Route
-              path="/forric"
-              element={
-                <PageLayout
-                  issDarkMode={issDarkMode}
-                  footerColour={{
-                    background: "white",
-                    color: "black",
-                  }}
-                >
-                  <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
-                </PageLayout>
-              }
-            />
-            <Route
-              path="/compound-capital"
-              element={
-                <PageLayout
-                  issDarkMode={issDarkMode}
-                  footerColour={{
-                    background: "white",
-                    color: "black",
-                  }}
-                >
-                  <CompountCapital
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <PageLayout issDarkMode={issDarkMode}>
+                {!loading && (
+                  <LandingPage
                     themeToggle={themeToggle}
                     issDarkMode={issDarkMode}
                   />
-                </PageLayout>
-              }
-            />
-
-            <Route
-              path="/luxistt"
-              element={
-                <PageLayout
+                )}
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/nox"
+            element={
+              <PageLayout
+                issDarkMode={issDarkMode}
+                footerColour={{
+                  background: "black",
+                  color: "white",
+                }}
+              >
+                <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/forric"
+            element={
+              <PageLayout
+                issDarkMode={issDarkMode}
+                footerColour={{
+                  background: "white",
+                  color: "black",
+                }}
+              >
+                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+          <Route
+            path="/compound-capital"
+            element={
+              <PageLayout
+                issDarkMode={issDarkMode}
+                footerColour={{
+                  background: "white",
+                  color: "black",
+                }}
+              >
+                <CompountCapital
+                  themeToggle={themeToggle}
                   issDarkMode={issDarkMode}
-                  footerColour={{
-                    background: "#14665E",
-                    color: "white",
-                  }}
-                >
-                  <Luxistt
-                    themeToggle={themeToggle}
-                    issDarkMode={issDarkMode}
-                  />
-                </PageLayout>
-              }
-            />
+                />
+              </PageLayout>
+            }
+          />
 
-            <Route
-              path="/cubana-group"
-              element={
-                <PageLayout
+          <Route
+            path="/luxistt"
+            element={
+              <PageLayout
+                issDarkMode={issDarkMode}
+                footerColour={{
+                  background: "#14665E",
+                  color: "white",
+                }}
+              >
+                <Luxistt themeToggle={themeToggle} issDarkMode={issDarkMode} />
+              </PageLayout>
+            }
+          />
+
+          <Route
+            path="/cubana-group"
+            element={
+              <PageLayout
+                issDarkMode={issDarkMode}
+                footerColour={{
+                  background: "black",
+                  color: "white",
+                }}
+              >
+                <CubanaGroup
+                  themeToggle={themeToggle}
                   issDarkMode={issDarkMode}
-                  footerColour={{
-                    background: "black",
-                    color: "white",
-                  }}
-                >
-                  <CubanaGroup
-                    themeToggle={themeToggle}
-                    issDarkMode={issDarkMode}
-                  />
-                </PageLayout>
-              }
-            />
-            <Route path="/test" element={<Test />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </ParallaxProvider>
+                />
+              </PageLayout>
+            }
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
