@@ -2,7 +2,6 @@ import React from "react";
 import { FullLogo } from "./Icons";
 
 const Footer = ({ issDarkMode, footerColour }) => {
-  console.log(footerColour, "footerColour");
   return (
     <div className="footer" style={footerColour && footerColour}>
       <footer className="wrapper">

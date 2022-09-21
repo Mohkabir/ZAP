@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useParallax } from "react-scroll-parallax";
+import { useForm, ValidationError } from "@formspree/react";
 
 import Brands from "../components/Brands";
-// import BrandsDetails from "../components/BrandsDetails";
 import Hero from "../components/Hero";
 import { ShortArrowRight } from "../components/Icons";
 import OurTeam from "../components/OurTeam";
@@ -12,6 +11,9 @@ import Section6 from "../components/Section6";
 import "../scss/landing.scss";
 
 const CaseOne = ({ themeToggle, issDarkMode }) => {
+  const formKey = "xvoykerw";
+  const [state, handleSubmit] = useForm(formKey);
+
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -50,14 +52,34 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
       <div className="section7 wrapper">
         <h2>
           This is the part where you get in touch and we make amazing things
-          happen
+          happen.
         </h2>
-        <div className={`${issDarkMode ? "inputDark" : "inputLight"}`}>
-          <input type="text" placeholder="your@email.com" />
-          <div className="submit">
+
+        <p className="alert" style={{ color: "red" }}>
+          {!state.submitting && state?.errors?.length
+            ? "Error: Please Try again"
+            : ""}
+        </p>
+        <p className="alert" style={{ color: "green" }}>
+          {!state.submitting && state?.succeeded ? "Submited Successfully" : ""}
+        </p>
+        <form
+          onSubmit={handleSubmit}
+          className={`${issDarkMode ? "inputDark" : "inputLight"}`}
+        >
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+          />
+          <button
+            className={`submit ${state.submitting && "loader"}`}
+            type="submit"
+          >
             <ShortArrowRight color={issDarkMode ? "white" : "black"} />
-          </div>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   );

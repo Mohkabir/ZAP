@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 
 const Section6 = ({ offsetY }) => {
   const scrollRef = useRef();
-console.log(offsetY, "offsetY");
   const sectionPosition = 3246;
   useEffect(() => {
     if (offsetY > sectionPosition) {
