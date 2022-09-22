@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const Section6 = ({ offsetY }) => {
+const Section6 = ({ offsetY, issDarkMode }) => {
   const scrollRef = useRef();
   const sectionPosition = 3246;
   useEffect(() => {
@@ -36,7 +36,7 @@ const Section6 = ({ offsetY }) => {
   return (
     <div className="section6">
       <div className="box_wrapper">
-        <div className="box1">
+        <div className={`box1 ${!issDarkMode && "box1_Light"}`}>
           <h2>
             We shape the products and services that improve the lives of
             thousands every single day.

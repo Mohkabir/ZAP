@@ -66,6 +66,9 @@ const Brands = ({ issDarkMode }) => {
       <div>
         <Medvue color={color} />
       </div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   );
 };

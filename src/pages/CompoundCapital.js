@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import CaseStudyHero from "../components/CaseStudyHero";
 import { ZeroOne } from "../components/Icons";
-// import hero from "../assets/images/forric_hero.png";
 import bell_image from "../assets/images/bell_image.png";
 
 

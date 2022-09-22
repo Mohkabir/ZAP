@@ -14,7 +14,7 @@ const Hero = ({ themeToggle, issDarkMode }) => {
     justifyContent: "flex-end",
   };
   return (
-    <div>
+    <div className="hero">
       <div className="head wrapper">
         <Link to="/">
           <Logo color={issDarkMode ? "white" : "black"} />
@@ -35,8 +35,11 @@ const Hero = ({ themeToggle, issDarkMode }) => {
             imaginations
           </h1>
           <p>
-            We work closley with our clients to truly understand who they are,
-            who they are speaking to, and what they want to say.
+            <span>
+              We work closley with our clients to truly understand who they are,
+              who
+            </span>
+            <span>they are speaking to, and what they want to say.</span>
           </p>
         </div>
       </div>

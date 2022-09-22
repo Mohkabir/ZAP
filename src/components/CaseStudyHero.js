@@ -26,27 +26,28 @@ const CaseStudyHero = ({
       className="caseStudyHero"
       style={{ background: bg && bg, color: color && color }}
     >
-      <div className="head wrapper">
-        <Link to="/">
-          <Logo color={color ? "black" : issDarkMode ? "white" : "black"} />
-        </Link>
+   
+        <div className="head wrapper">
+          <Link to="/">
+            <Logo color={color ? "black" : issDarkMode ? "white" : "black"} />
+          </Link>
 
-        {/* <div
+          {/* <div
           className="darkToggle"
           style={issDarkMode ? dark : light}
           onClick={themeToggle}
         >
           <span style={{ background: issDarkMode ? "white" : "black" }}></span>
         </div> */}
-      </div>
-      <div className="hero_contents case_hero_contents">
-        <div className="wrap_text">
-          <span>{title} -</span>
-          <h1>
-            {heading} <span style={{ color: "#292929" }}>{heading2}</span>
-          </h1>
         </div>
-      </div>
+        <div className="hero_contents case_hero_contents">
+          <div className="wrap_text">
+            <span>{title} -</span>
+            <h1>
+              {heading} <span style={{ color: "#292929" }}>{heading2}</span>
+            </h1>
+          </div>
+        </div>
     </div>
   );
 };

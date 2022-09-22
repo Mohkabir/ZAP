@@ -15,7 +15,18 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const [state, handleSubmit] = useForm(formKey);
 
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const defaultWidth = 700
+  const [imgWidth, setimgWidth] = useState(defaultWidth);
+
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+    console.log(window.pageYOffset, "offsetY");
+
+    if (window.pageYOffset > 4300) {
+      setimgWidth(window.pageYOffset + defaultWidth - 4300);
+      console.log(window.pageYOffset + defaultWidth - 4300, "yeahhh");
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -41,14 +52,14 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
 
       <div className="beforeSticky2">
         <div className="sticky">
-          <Section6 offsetY={offsetY} />
+          <Section6 offsetY={offsetY} issDarkMode={issDarkMode}  />
         </div>
       </div>
 
       <div className="wrapper singleImage">
-        <img src={singleImage1} alt="" />
+        <img src={singleImage1} alt="" style={{ width: `${imgWidth}px` }} />
       </div>
-      <OurTeam />
+      <OurTeam issDarkMode={issDarkMode} />
       <div className="section7 wrapper">
         <h2>
           This is the part where you get in touch and we make amazing things

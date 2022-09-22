@@ -2,33 +2,63 @@
   .wrap_text {
     width: 90%;
   }
-  .hero_contents {
-    margin: auto;
-    margin-top: 17%;
-  }
+
   .case_hero_contents {
     margin-top: 5%;
   }
-
   .section2 {
     overflow-x: initial;
+    height: initial;
     & > div {
       display: flex;
       width: 100%;
       flex-wrap: wrap;
       & > div {
         width: 50%;
+        height: 420px;
+        border-left: 1px solid white;
+        .wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 60%;
+          height: 350px;
+          margin: auto;
+        }
       }
     }
   }
+
   .brands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
     div {
+      width: 20%;
       width: 25%;
+      margin-bottom: 90px;
     }
-    svg {
-      width: 80%;
+    & > div:nth-child(5) {
+      text-align: left;
+    }
+    & > div:nth-child(8) {
+      text-align: right;
+    }
+    & > div:nth-child(9) {
+      text-align: left;
+      padding-right: 0px;
+    }
+    & > div:nth-child(10) {
+      text-align: left;
+    }
+    & > div:nth-child(12) {
+      text-align: right;
     }
   }
+
   .section6 {
     padding: 0px;
     width: 90%;
@@ -139,14 +169,21 @@
       padding: 3px 6px;
     }
   }
-
+  .hero {
+    margin-bottom: 30px;
+  }
   .hero_contents {
     width: 90%;
-    margin-top: 60%;
+    margin: 0 auto;
   }
   .case_hero_contents {
-    margin-top: 10%;
+    margin-bottom: 0;
   }
+  .caseStudyHero {
+  
+  margin-bottom: 20px;
+}
+
 
   .wrap_text {
     width: 100%;
@@ -159,43 +196,45 @@
     }
   }
   .section2 {
-    width: 90%;
-    margin: 0 auto;
+    overflow-x: initial;
     & > div {
-      width: 100%;
-      flex-wrap: wrap;
       flex-direction: column;
-
+      width: 100%;
       & > div {
-        width: 100%;
-        text-align: center;
-        border-left: 1px solid var(--white);
-        margin-bottom: 40px;
-      }
-      & > div {
-        padding-top: 80px;
-        height: 495px;
-        p {
-          margin: 50px 0;
-          margin-bottom: 130px;
-        }
-        div {
-          width: 67%;
-          margin: 0 auto;
-        }
+        width: 90%;
+        height: 470px;
       }
     }
   }
+
   .brands {
+    width: 90%;
+    margin: 0 auto;
+    svg {
+      width: 80%;
+    }
     div {
       width: 33%;
       margin-bottom: 30px;
-
-      svg {
-        width: 80%;
-      }
+    }
+    & > div:nth-child(3) {
+      text-align: right;
+    }
+    & > div:nth-child(4) {
+      text-align: left;
+    }
+    & > div:nth-child(6) {
+      text-align: right;
+    }
+    & > div:nth-child(8) {
+      text-align: left;
+    }
+    & > div:nth-child(9) {
+      text-align: right;
+      padding-right: 0px;
     }
   }
+
   .our_team {
     padding: 50px 0;
     .card_wrapper {
@@ -215,11 +254,13 @@
       }
       & > div {
         width: 100%;
+        margin-bottom: 0;
       }
     }
   }
   .singleImage {
     padding: 40px 0;
+    padding-bottom: 0;
   }
   .section6 {
     padding: 0px;
@@ -249,40 +290,18 @@
         padding-bottom: 20px;
       }
       .loader {
-    
-      svg{
-        width: 15px;
-        height: 15px;
-        border-radius: 50px;
-        padding: 2px;
+        svg {
+          width: 15px;
+          height: 15px;
+          border-radius: 50px;
+          padding: 2px;
+        }
       }
-    }
 
       .submit {
         width: 29px;
         height: 29px;
         margin-top: -20px;
-      }
-    }
-  }
-
-  .our_team {
-    padding: 10px 0;
-    flex-direction: column;
-    .card_wrapper {
-      & > div {
-        width: 100%;
-        margin-bottom: 40px;
-        h3 {
-          margin-bottom: 0;
-        }
-        P {
-          margin: 0;
-          padding: 0;
-        }
-      }
-      & > div:nth-child(6) {
-        display: none;
       }
     }
   }

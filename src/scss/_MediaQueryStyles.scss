@@ -14,9 +14,8 @@
     position: static;
   }
   .beforeSticky2 {
-    height: 1600px;
     height: initial;
-    position: relative;
+    position: initial;
   }
 }
 
@@ -61,5 +60,17 @@
       margin: 0 auto;
       animation: rotateLogo 3s ease-in-out;
     }
+  }
+
+  .beforeSticky {
+    height: initial;
+    position: relative;
+  }
+  .sticky {
+    position: static;
+    height: initial;
+  }
+  .beforeSticky2 {
+    height: initial;
   }
 }
