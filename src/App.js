@@ -41,7 +41,7 @@ function App() {
         <Helmet>
           <style>{`body{background : ${
             issDarkMode ? "black" : "white"
-          }; color: ${issDarkMode ? "white" : "black"}}`}</style>
+          }; color: ${issDarkMode ? "white" : "#1E1E1E"}}`}</style>
         </Helmet>
 
         <Routes>

@@ -20,6 +20,7 @@ const Footer = ({ issDarkMode, footerColour }) => {
           <span>
             31 Old airport road by <br /> Thinkers Corner Emene <br />{" "}
             Industrial Layout, <br /> Thinkers Corner, Enugu
+            <p>‎+234 916 414 7181</p>
           </span>
         </div>
         <div className={`${issDarkMode ? "darkLink" : "lightLink"}`}>

@@ -10,7 +10,7 @@ const Section2 = ({ issDarkMode, offsetY }) => {
   const scrollRef = useRef();
 
   const sectionPosition = 785;
-  
+
   useEffect(() => {
     if (offsetY > sectionPosition) {
       let xAxisToScroll = offsetY - sectionPosition;
@@ -43,15 +43,15 @@ const Section2 = ({ issDarkMode, offsetY }) => {
       bg: case3,
     },
     {
-      title: "Luxistt",
-      text: "Serenity away from home in apartments",
-      url: "/luxistt",
-      bg: case4,
-    },
-    {
       title: "Cubana group",
       text: "Palatial ecstatic hospitality brand",
       url: "/cubana-group",
+      bg: case4,
+    },
+    {
+      title: "Luxistt",
+      text: "Serenity away from home in apartments",
+      url: "/luxistt",
       bg: case5,
     },
   ];
@@ -68,10 +68,11 @@ const Section2 = ({ issDarkMode, offsetY }) => {
             onMouseLeave={() => toggleHover(null)}
           >
             <div style={{ borderColor: issDarkMode ? "white" : "black" }}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <Link to={item.url}>View case study</Link>
-              <span></span>
+              <div className="wrap">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <Link to={item.url}>View case study</Link>
+              </div>
             </div>
           </div>
         ))}

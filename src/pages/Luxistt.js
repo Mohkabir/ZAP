@@ -19,7 +19,7 @@ const Luxistt = ({ themeToggle, issDarkMode }) => {
         themeToggle={themeToggle}
         issDarkMode={issDarkMode}
         title="Luxistt"
-        heading="Offering you a comfortable and luxurious stay"
+        heading={`Offering you a comfortable and luxurious stay`}
         bg="white"
         color="black"
       />

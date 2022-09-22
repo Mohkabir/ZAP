@@ -7,7 +7,7 @@ import image4 from "../assets/images/profile4.png";
 import image5 from "../assets/images/profile5.png";
 import image6 from "../assets/images/profile6.png";
 
-const OurTeam = () => {
+const OurTeam = ({ issDarkMode }) => {
   const [hover, sethover] = useState(null);
   const toggleHover = (idx) => {
     sethover(idx);
@@ -16,7 +16,7 @@ const OurTeam = () => {
   const datas = [
     {
       name: "Nkenna Emehelu",
-      title: "Creative Director",
+      title: "Founder",
       profile: image1,
     },
     {
@@ -63,8 +63,11 @@ const OurTeam = () => {
             <div>
               <img src={data.profile} alt="" />
             </div>
-
-            <div className={`unhovered ${hover === idx ? "hovered" : ""}`}>
+            <div
+              className={`unhovered ${hover === idx ? "hovered" : ""} ${
+                !issDarkMode && "thumbnail_Light"
+              }`}
+            >
               <h3>{data.name}</h3>
               <p>{data.title}</p>
             </div>
