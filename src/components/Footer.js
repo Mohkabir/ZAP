@@ -2,8 +2,12 @@ import React from "react";
 import { FullLogo } from "./Icons";
 
 const Footer = ({ issDarkMode, footerColour }) => {
+  const moreStyle = {
+    ...footerColour,
+    borderColor: footerColour?.color,
+  };
   return (
-    <div className="footer" style={footerColour && footerColour}>
+    <div className="footer" style={footerColour && moreStyle}>
       <footer className="wrapper">
         <div>
           <FullLogo

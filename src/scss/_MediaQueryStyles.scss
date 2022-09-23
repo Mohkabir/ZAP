@@ -5,17 +5,26 @@
   .wrap_text {
     width: 90%;
   }
-
-  .beforeSticky {
-    height: initial;
-    position: initial;
+  .mobile {
+    display: block;
   }
+  .desktop {
+    display: none;
+  }
+
   .sticky {
     position: static;
+    height: initial;
   }
+
   .beforeSticky2 {
     height: initial;
     position: initial;
+  }
+
+  .beforeSticky {
+    height: initial;
+    position: static;
   }
 }
 

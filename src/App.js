@@ -125,8 +125,8 @@ function App() {
               <PageLayout
                 issDarkMode={issDarkMode}
                 footerColour={{
-                  background: "black",
-                  color: "white",
+                  background: "white",
+                  color: "black",
                 }}
               >
                 <CubanaGroup

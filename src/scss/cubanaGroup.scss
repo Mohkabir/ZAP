@@ -1,29 +1,85 @@
+.cubana {
+  position: relative;
+  width: 100%;
+
+  .wrap {
+    width: 80%;
+    height: 500px;
+    .logo {
+      margin-bottom: 40px;
+      width: 85%;
+      position: sticky;
+      z-index: 2;
+    }
+
+    .hero_contents {
+      width: 93%;
+    }
+  }
+  .hero_image {
+    margin-top: -600px;
+    max-width: 100%;
+  }
+}
 .cubanaHero {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: -300px;
-  img {
-    border: 1px solid white;
-  }
+  margin-top: -200px;
+
   p {
     margin-top: 40px;
     letter-spacing: 0.435em;
   }
 }
 
-.cubanaContents {
-  height: 400px;
-}
+@media (max-width: 1280px) {
+  .cubana {
+    .wrap {
+      width: 80%;
+      height: 700px;
+      .logo {
+        margin-bottom: 40px;
+        width: 85%;
+        position: sticky;
+        z-index: 2;
+      }
 
+      .hero_contents {
+        width: 93%;
+      }
+    }
+    .hero_image {
+      margin-top: -600px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .cubana {
+    .wrap {
+      width: 100%;
+      height: 400px;
+      .logo {
+        margin-bottom: 40px;
+        width: 85%;
+        position: sticky;
+        z-index: 2;
+      }
+
+      h1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+      .hero_contents {
+        width: 93%;
+      }
+    }
+    .hero_image {
+      margin-top: -250px;
+      margin-bottom: 300px;
+    }
   }
   .cubanaHero {
-    margin-bottom: -100px;
-    width: 90%;
-  }
-
-  .cubanaContents {
-    height: 150px;
+    text-align: center;
+  
   }
 }

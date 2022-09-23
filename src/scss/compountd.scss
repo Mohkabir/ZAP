@@ -1,6 +1,7 @@
 .compountdHero {
   background-color: #759a3d;
-  margin-top: -100px;
+  margin-top: -200px;
+  // margin-top: -10vw;
   & > div {
     width: 90%;
     margin: 0 auto;
@@ -13,6 +14,7 @@
     }
   }
 }
+
 .compountdsContents {
   background-color: white;
   height: 300px;
@@ -20,11 +22,12 @@
 
 @media (max-width: 768px) {
   .compountdHero {
-    // margin-top: -100px;
     & > div {
       flex-direction: column;
       align-items: center;
       padding: 80px 0;
+      padding-top: 120px;
+
       img {
         margin-bottom: -120px;
         width: 100%;

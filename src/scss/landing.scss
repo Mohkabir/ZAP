@@ -1,9 +1,10 @@
 .hero {
-  height: 100vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+  margin-bottom: 15vh;
 }
 
 .head {
@@ -51,28 +52,33 @@
   }
 }
 .caseStudyHero {
-  height: 100vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
+  margin-bottom: 15vh;
+  // margin-bottom: 70px;
 }
-
 
 .section1 {
   width: 90%;
   margin: 120px auto;
 }
+
 .section2 {
   top: 0;
   overflow-x: scroll;
-  & > div {
+  .nox {
+    text-shadow: 2px 2px 2px #777;
+  }
+  & > .card_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 150%;
-    & > div {
-      width: 25%;
+    width: 160%;
+    & > .card {
+      width: 20%;
       border-top: 1px solid;
       border-bottom: 1px solid;
       border-right: 1px solid;
@@ -82,44 +88,43 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      .wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 60%;
-        height: 70vh;
-        margin: auto;
-        a {
-          text-align: center;
-          display: inline-block;
-          border: 1px solid var(--white);
-          border-radius: 30px;
-          padding: 15px 20px;
-          width: 184px;
-          background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.6)
-          );
-          text-decoration: none;
-          color: var(--white);
-          transition: all 300ms ease-in-out;
-          &:hover {
-            background-color: var(--white);
-            // color: var(--black);
+      & > .beforeWrap {
+        width: 65%;
+        & > .wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 70vh;
+          margin: auto;
+          a {
+            text-align: center;
+            display: inline-block;
+            border: 1px solid var(--white);
+            border-radius: 30px;
+            padding: 15px 20px;
+            width: 184px;
+            background: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            );
+            text-decoration: none;
+            color: var(--white);
+            transition: all 300ms ease-in-out;
+            &:hover {
+              background-color: var(--white);
+              // color: var(--black);
+            }
           }
         }
       }
       p {
-        // margin: 130px 0;
-        // margin-bottom: 170px;
         font-size: 20px;
       }
       h3 {
         font-weight: 500;
       }
-      div {
-      }
+
       &:hover {
         background-position: center;
         background-size: cover;
@@ -142,10 +147,10 @@
   div {
     width: 20%;
     margin-bottom: 90px;
-    // border: 1px solid red;
   }
   & > div:nth-child(4) {
     text-align: right;
+    padding-right: 30px;
   }
   & > div:nth-child(5) {
     text-align: right;
@@ -153,6 +158,7 @@
   & > div:nth-child(9) {
     text-align: right;
     padding-right: 27px;
+    padding-right: 60px;
   }
   & > div:nth-child(10) {
     text-align: right;
@@ -162,7 +168,8 @@
   padding: 100px 0;
   padding-bottom: 0px;
   text-align: center;
-  // border: 2px solid red;
+  border: 2px solid yellow;
+  height: 100vh;
   width: 100%;
 
   img {
@@ -172,10 +179,14 @@
 }
 
 .section6 {
-  padding: 80px 0;
   margin: 0 auto;
   width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .box_wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,7 +207,7 @@
         width: 240%;
         .card {
           width: 22%;
-          padding-left: 10px;
+          padding-left: 30px;
           & > div {
             width: 100%;
             sup {
@@ -219,6 +230,7 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+
     .unhovered {
       position: absolute;
       top: 0;
@@ -241,8 +253,13 @@
       color: white;
     }
     & > div {
-      width: 33%;
+      width: 33.2%;
       position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
       h3 {
         font-weight: 600;
         margin: 0;

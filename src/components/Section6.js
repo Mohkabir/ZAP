@@ -1,11 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useIsInViewport } from "../helpers/index";
 
-const Section6 = ({ offsetY, issDarkMode }) => {
+const Section6 = ({
+  offsetY,
+  issDarkMode,
+  check2,
+  beforeStickyRef2,
+  containerRef2,
+}) => {
+  const isInViewport1 = useIsInViewport(check2);
   const scrollRef = useRef();
-  const sectionPosition = 3246;
+
   useEffect(() => {
-    if (offsetY > sectionPosition) {
-      let xAxisToScroll = offsetY - sectionPosition;
+    if (isInViewport1 === true) {
+      let xAxisToScroll = offsetY - containerRef2.current.offsetTop;
       scrollRef.current.scrollLeft = xAxisToScroll;
     }
   }, [offsetY]);
@@ -43,7 +51,7 @@ const Section6 = ({ offsetY, issDarkMode }) => {
           </h2>
         </div>
         <div className="box2" ref={scrollRef}>
-          <div className="card_wrapper">
+          <div className="card_wrapper" ref={beforeStickyRef2}>
             {datas.map((data, idx) => (
               <div className="card">
                 <div>

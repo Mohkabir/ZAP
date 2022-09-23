@@ -6,24 +6,31 @@
   .case_hero_contents {
     margin-top: 5%;
   }
+  .mobile {
+    height: 2000px !important;
+  }
+
   .section2 {
     overflow-x: initial;
     height: initial;
-    & > div {
+    width: 90%;
+    margin: 0 auto;
+    & > .card_wrapper {
       display: flex;
       width: 100%;
       flex-wrap: wrap;
-      & > div {
+      & > .card {
         width: 50%;
-        height: 420px;
+        height: 665px;
         border-left: 1px solid white;
-        .wrap {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 60%;
-          height: 350px;
-          margin: auto;
+        .beforeWrap {
+          .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 520px;
+            margin: auto;
+          }
         }
       }
     }
@@ -40,6 +47,10 @@
       width: 20%;
       width: 25%;
       margin-bottom: 90px;
+    }
+    & > div:nth-child(4) {
+      // text-align: left;
+      padding-right: 0px;
     }
     & > div:nth-child(5) {
       text-align: left;
@@ -62,6 +73,8 @@
   .section6 {
     padding: 0px;
     width: 90%;
+    height: initial;
+
     .box_wrapper {
       justify-content: space-between;
       align-items: center;
@@ -75,9 +88,13 @@
         .card_wrapper {
           display: flex;
           justify-content: space-between;
-          width: 160%;
+          width: 100%;
+          flex-wrap: wrap;
+          padding-left: 0;
           .card {
-            width: 22%;
+            width: 48%;
+            padding-left: 0;
+
             & > div {
               width: 100%;
               sup {
@@ -86,7 +103,7 @@
             }
           }
           .card:nth-child(4) {
-            width: 24%;
+            width: 50%;
           }
         }
       }
@@ -170,7 +187,8 @@
     }
   }
   .hero {
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
+    // margin-bottom: 0;
   }
   .hero_contents {
     width: 90%;
@@ -180,10 +198,10 @@
     margin-bottom: 0;
   }
   .caseStudyHero {
-  
-  margin-bottom: 20px;
-}
-
+  height: 95vh;
+// margin-bottom: 25vh;
+    // margin-bottom: 20px;
+  }
 
   .wrap_text {
     width: 100%;
@@ -195,14 +213,27 @@
       width: 100%;
     }
   }
+  .mobile {
+    height: 2350px !important;
+  }
+
   .section2 {
     overflow-x: initial;
-    & > div {
+    height: initial;
+    & > .card_wrapper {
       flex-direction: column;
       width: 100%;
-      & > div {
-        width: 90%;
+      & > .card {
+        width: 100%;
         height: 470px;
+        // height: 665px;
+
+        // border: 1px solid red;
+        .beforeWrap {
+          .wrap {
+            height: 350px;
+          }
+        }
       }
     }
   }
@@ -216,6 +247,8 @@
     div {
       width: 33%;
       margin-bottom: 30px;
+
+      // border: 2px solid red;
     }
     & > div:nth-child(3) {
       text-align: right;
