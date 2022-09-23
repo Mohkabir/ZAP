@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Logo } from "../components/Icons";
 import CaseStudyHero from "../components/CaseStudyHero";
 import cubana_img from "../assets/images/cubana_img.png";
 
@@ -13,15 +15,24 @@ const CubanaGroup = ({ themeToggle, issDarkMode }) => {
 
   return (
     <div className="cubana">
-      <CaseStudyHero
-        themeToggle={themeToggle}
-        issDarkMode={issDarkMode}
-        title="Cubana group"
-        heading="Palatial ecstatic hospitality brand"
-   
-      />
-      <div className="cubanaHero">
+      <div className="wrap">
+        <div className="head wrapper logo">
+          <Link to="/">
+            <Logo color={issDarkMode ? "white" : "black"} />
+          </Link>
+        </div>
+        <div className="hero_contents case_hero_contents">
+          <div className="wrap_text">
+            <span>Cubana group -</span>
+            <h1>Palatial ecstatic hospitality brand</h1>
+          </div>
+        </div>
+      </div>
+      <div className="hero_image">
         <img src={cubana_img} alt="" />
+      </div>
+
+      <div className="cubanaHero">
         <p>Coming soon</p>
       </div>
       <div className="cubanaContents"></div>

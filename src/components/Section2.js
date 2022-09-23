@@ -5,15 +5,29 @@ import case2 from "../assets/images/case2.png";
 import case3 from "../assets/images/case3.png";
 import case4 from "../assets/images/case4.png";
 import case5 from "../assets/images/case5.png";
+import { useIsInViewport } from "../helpers/index";
 
-const Section2 = ({ issDarkMode, offsetY }) => {
+const Section2 = ({
+  issDarkMode,
+  offsetY,
+  check,
+  beforeStickyRef,
+  containerRef,
+}) => {
+  const isInViewport1 = useIsInViewport(check);
   const scrollRef = useRef();
 
-  const sectionPosition = 785;
-
   useEffect(() => {
-    if (offsetY > sectionPosition) {
-      let xAxisToScroll = offsetY - sectionPosition;
+    // console.log(
+    //   "offsetY",
+    //   offsetY,
+    //   "\n",
+    //   "toScrolleft",
+    //   offsetY - containerRef.current.offsetTop
+    // );
+
+    if (isInViewport1 === true) {
+      let xAxisToScroll = offsetY - containerRef.current.offsetTop;
       scrollRef.current.scrollLeft = xAxisToScroll;
     }
   }, [offsetY]);
@@ -58,18 +72,21 @@ const Section2 = ({ issDarkMode, offsetY }) => {
 
   return (
     <div className="section2 sticky" ref={scrollRef}>
-      <div>
+      <div ref={beforeStickyRef} className="card_wrapper">
         {section2Data.map((item, idx) => (
           <div
             key={idx}
-            className={`${!issDarkMode && "light_mode"}`}
+            className={`card ${!issDarkMode && "light_mode"}`}
             style={{ backgroundImage: hover === idx ? `url(${item.bg})` : "" }}
             onMouseEnter={() => toggleHover(idx)}
             onMouseLeave={() => toggleHover(null)}
           >
-            <div style={{ borderColor: issDarkMode ? "white" : "black" }}>
+            <div
+              style={{ borderColor: issDarkMode ? "white" : "black" }}
+              className="beforeWrap"
+            >
               <div className="wrap">
-                <h3>{item.title}</h3>
+                <h3 className={` ${idx === 1 && "nox"}`}>{item.title}</h3>
                 <p>{item.text}</p>
                 <Link to={item.url}>View case study</Link>
               </div>

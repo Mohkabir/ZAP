@@ -6,7 +6,7 @@
   }
 }
 :root {
-  --black: #1E1E1E;
+  --black: #1e1e1e;
   --white: #ffffff;
   --primary: #fdbb06;
   --primaryHovered: #866711;
@@ -62,11 +62,14 @@ body {
   height: 100vh;
   width: 90%;
   @keyframes rotateLogo {
-    from {
-      transform: rotate(0deg);
+    0% {
+      transform: scale(0.7);
     }
-    to {
-      transform: rotate(360deg);
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.7);
     }
   }
 
@@ -74,7 +77,8 @@ body {
     width: 300% !important;
     height: 300% !important ;
     margin: 0 auto;
-    animation: rotateLogo 3s ease-in-out;
+    animation: rotateLogo 2s ease-in-out;
+    animation-iteration-count: infinite;
   }
 }
 .global_container {
@@ -147,7 +151,7 @@ p {
 
 .beforeSticky {
   // height: 1500px;
-  height: 1530px;
+  // height: 1530px;
 
   position: relative;
 }
@@ -158,8 +162,21 @@ p {
 }
 .beforeSticky2 {
   // height: 1600px;
-  height: 1720px;
+  // height: 1720px;
+  // height: 100vh;
+  // border: 2px solid red;
 
   position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
 }
 @import "./MediaQueryStyles.scss";

@@ -1,5 +1,5 @@
 import React from "react";
-import { NoxLog, NoxOne, NoxThree, NoxTwo, RightCaret } from "./Icons";
+import { NoxLog, NoxLog1, NoxOne, NoxThree, NoxTwo, RightCaret } from "./Icons";
 
 const NoxSection1 = () => {
   return (
@@ -32,7 +32,7 @@ const NoxSection1 = () => {
           <NoxLog />
         </p>
         <p>
-          <NoxLog />
+          <NoxLog1 />
         </p>
         <p>
           The letters of the logo are formed from a combination of both a{" "}
