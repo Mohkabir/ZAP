@@ -12,6 +12,7 @@ import {
   calculateHeight,
   CheckDeviceScreen,
   useIsInViewport,
+  useScrollDirection,
 } from "../helpers";
 
 const CaseOne = ({ themeToggle, issDarkMode }) => {
@@ -28,46 +29,24 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
 
   const [offsetY, setOffsetY] = useState(0);
 
-  const defaultWidth = 700;
+  const defaultWidth = 50;
   const [imgWidth, setimgWidth] = useState(defaultWidth);
+  const [offsetYAfterView, setOffsetYAfterView] = useState(0);
 
+  const scrollDirection = useScrollDirection();
   const isInViewport1 = useIsInViewport(check3);
 
   const handleScroll = () => {
     setOffsetY(window.pageYOffset);
-
-    if (isInViewport1) {
-      // setimgWidth(window.pageYOffset + defaultWidth - 4300);
-      // console.log(isInViewport1, "isInViewport1", window.pageYOffset, offsetY);
-      // setimgWidth(window.pageYOffset + defaultWidth - 4300);
-    }
-
-    // if (window.pageYOffset > 6398) {
-    //   setimgWidth(window.pageYOffset + defaultWidth - 6398);
-    //   console.log(window.pageYOffset + defaultWidth - 4300, "yeahhh");
-    // }
   };
-  let offf = window.pageYOffset;
-  console.log(offf, "ooofffffffff");
-
-  // const spaceBelow =
-  //   check3.parentNode.offsetHeight - (check3.offsetTop + check3.offsetHeight);
-
   useEffect(() => {
-    console.log(isInViewport1, "isInViewport1", window.pageYOffset, offsetY);
-    console.log(
-      "offsetTop",
-      check3.current.offsetTop,
-      ".....",
-      "offsetY",
-      offsetY,
-      ".....",
-      "calc",
-      offsetY - check3.current.offsetTop
-    );
     if (isInViewport1 === true) {
-      setimgWidth(offsetY - check3.current.offsetTop);
-      // console.log(spaceAbove, defaultWidth + offf, "yeahhhhhhh");
+      if (scrollDirection === "up") {
+        setOffsetYAfterView(offsetYAfterView - 1);
+      } else {
+        setOffsetYAfterView(offsetYAfterView + 1);
+      }
+      setimgWidth(offsetYAfterView + defaultWidth);
     }
   }, [offsetY]);
 
@@ -150,8 +129,8 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
       </div>
 
       <div className="wrapper singleImage">
-        <div ref={check3} style={{ border: "2px solid red" }}></div>
-        <img src={singleImage1} alt="" style={{ width: `${imgWidth}px` }} />
+        <div ref={check3} className="viewPort"></div>
+        <img src={singleImage1} alt="" style={{ width: `${imgWidth}%` }} />
       </div>
       <OurTeam issDarkMode={issDarkMode} />
       <div className="section7 wrapper">
