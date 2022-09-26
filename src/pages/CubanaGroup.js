@@ -22,7 +22,10 @@ const CubanaGroup = ({ themeToggle, issDarkMode }) => {
           </Link>
         </div>
         <div className="hero_contents case_hero_contents">
-          <div className="wrap_text">
+          <div
+            className="wrap_text"
+            style={{ background: issDarkMode ? "black":"white"  }}
+          >
             <span>Cubana group -</span>
             <h1>Palatial ecstatic hospitality brand</h1>
           </div>
