@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { CheckDeviceScreen } from "../helpers";
 
 const Section2Card = ({
   idx,
@@ -12,6 +13,9 @@ const Section2Card = ({
   activeBg,
 }) => {
   const [hover, sethover] = useState(false);
+
+  const screen = CheckDeviceScreen();
+
   const toggleHover = (val) => {
     sethover(val);
   };
@@ -20,11 +24,15 @@ const Section2Card = ({
     <div
       key={idx}
       className={`card ${!issDarkMode && "light_mode"} ${
-        activeBg === idx && "light_mode_hover"
+       screen === "mobile" &&  activeBg === idx && "light_mode_hover"
       }`}
       style={{
         backgroundImage:
-          hover === true ? `url(${bg})` : activeBg === idx && `url(${bg})`,
+          screen === "mobile"
+            ? hover === true
+              ? `url(${bg})`
+              : activeBg === idx && `url(${bg})`
+            : hover === true && `url(${bg})`,
       }}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}

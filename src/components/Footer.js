@@ -1,6 +1,6 @@
 import React from "react";
 import { FullLogo } from "./Icons";
-
+import { Link } from "react-router-dom";
 const Footer = ({ issDarkMode, footerColour }) => {
   const moreStyle = {
     ...footerColour,
@@ -29,34 +29,32 @@ const Footer = ({ issDarkMode, footerColour }) => {
         </div>
         <div className={`${issDarkMode ? "darkLink" : "lightLink"}`}>
           <a
-            href=""
+            target="_blank"
+            href="https://www.instagram.com/zap_expression/"
             style={{ color: footerColour?.color && footerColour.color }}
           >
             Instagram
           </a>
           <a
-            href=""
+            target="_blank"
+            href="https://www.linkedin.com/company/zap-expression/"
             style={{ color: footerColour?.color && footerColour.color }}
           >
             LinkedIn
           </a>
           <a
-            href=""
+            target="_blank"
+            href="https://www.facebook.com/zapexpression?_rdc=1&_rdr"
             style={{ color: footerColour?.color && footerColour.color }}
           >
             Facebook
           </a>
           <a
-            href=""
+            target="_blank"
+            href="https://twitter.com/ZapExpression"
             style={{ color: footerColour?.color && footerColour.color }}
           >
             Twitter
-          </a>
-          <a
-            href=""
-            style={{ color: footerColour?.color && footerColour.color }}
-          >
-            Youtube
           </a>
         </div>
         <div>

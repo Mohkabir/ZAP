@@ -58,23 +58,26 @@ export const GetElementWidthAndHeight = (elementRef) => {
   return { width, height };
 };
 export const CheckDeviceScreen = () => {
-  const [screen, setscreen] = useState();
-  let windWidth = window.innerWidth;
-
+ 
+  const [screen, setscreen] = useState(window.innerWidth);
+  let res;
   useEffect(() => {
     window.addEventListener("resize", checkScreen);
-  }, []);
+  }, [screen]);
+
   const checkScreen = () => {
-    if (windWidth === 768 && windWidth <= 768) {
-      setscreen("mobile");
-    } else if (windWidth > 768 && windWidth < 1024) {
-      setscreen("tablet");
-    } else {
-      setscreen("desktop");
-    }
+    setscreen(window.innerWidth);
   };
 
-  return screen;
+  if (screen <= 768) {
+    res = "mobile";
+  } else if (screen > 768 && screen <= 1280) {
+    res = "tablet";
+  } else if (screen > 1280) {
+    res = "desktop";
+  }
+
+  return res;
 };
 export const calculateHeight = (ref, number) => {
   const containerHeight = GetElementWidthAndHeight(ref);
@@ -171,9 +174,6 @@ export const calculateHeight = (ref, number) => {
     return calc + "px";
   }
 };
-
-
-
 
 const THRESHOLD = 0;
 export const useScrollDirection = () => {
