@@ -4,7 +4,7 @@ import case2 from "../assets/images/case2.png";
 import case3 from "../assets/images/case3.png";
 import case4 from "../assets/images/case4.png";
 import case5 from "../assets/images/case5.png";
-import { useIsInViewport,  } from "../helpers/index";
+import {  useIsInViewport,  } from "../helpers/index";
 import Section2Card from "./Section2Card";
 
 const Section2 = ({

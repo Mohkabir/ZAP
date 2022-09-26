@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useForm } from "@formspree/react";
 import Brands from "../components/Brands";
 import Hero from "../components/Hero";
-import { ShortArrowRight } from "../components/Icons";
+import { Checked, ShortArrowRight } from "../components/Icons";
 import OurTeam from "../components/OurTeam";
 import Section2 from "../components/Section2";
 import singleImage1 from "../assets/images/singleImage1.png";
@@ -26,7 +26,6 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const beforeStickyRef2 = useRef(null);
   const containerRef = useRef(null);
   const containerRef2 = useRef(null);
-
   const [offsetY, setOffsetY] = useState(0);
 
   const defaultWidth = 50;
@@ -35,6 +34,7 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
 
   const scrollDirection = useScrollDirection();
   const isInViewport1 = useIsInViewport(check3);
+  const screen = CheckDeviceScreen();
 
   const handleScroll = () => {
     setOffsetY(window.pageYOffset);
@@ -130,7 +130,11 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
 
       <div className="wrapper singleImage">
         <div ref={check3} className="viewPort"></div>
-        <img src={singleImage1} alt="" style={{ width: `${imgWidth}%` }} />
+        <img
+          src={singleImage1}
+          alt=""
+          style={{ width: screen === "desktop" ? `${imgWidth}%` : "100%" }}
+        />
       </div>
       <OurTeam issDarkMode={issDarkMode} />
       <div className="section7 wrapper">
@@ -144,7 +148,7 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
             ? "Error: Please Try again"
             : ""}
         </p>
-        <p className="alert" style={{ color: "green" }}>
+        <p className="alert" style={{ color: "#FDBB06" }}>
           {!state.submitting && state?.succeeded ? "Submited Successfully" : ""}
         </p>
         <form
@@ -161,7 +165,11 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
             className={`submit ${state.submitting && "loader"}`}
             type="submit"
           >
-            <ShortArrowRight color={issDarkMode ? "white" : "black"} />
+            {!state.submitting && state?.succeeded ? (
+              <Checked />
+            ) : (
+              <ShortArrowRight color={issDarkMode ? "white" : "black"} />
+            )}
           </button>
         </form>
       </div>

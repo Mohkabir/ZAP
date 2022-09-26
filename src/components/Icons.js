@@ -16,7 +16,32 @@ export const Logo = ({ color }) => {
     </svg>
   );
 };
-
+export const Checked = () => {
+  return (
+    <svg
+      width="28"
+      height="24"
+      viewBox="0 0 28 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        width="17.2383"
+        height="3.16138"
+        rx="1.58069"
+        transform="matrix(0.829963 0.557819 -0.364411 0.931238 1.15204 11.3658)"
+        fill="#008000"
+      />
+      <rect
+        width="24.9373"
+        height="2.86067"
+        rx="1.43033"
+        transform="matrix(0.525432 -0.850835 0.685996 0.727606 12.9348 21.2175)"
+        fill="#008000"
+      />
+    </svg>
+  );
+}
 export const FullLogo = ({ color }) => {
   return (
     <svg
