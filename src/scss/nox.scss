@@ -79,6 +79,17 @@
     margin: 0 auto;
     margin-bottom: -150px;
   }
+  .nox3_4 {
+  }
+  .light_nox {
+    background-color: #fdbb06;
+    border-radius: 20px;
+  }
+  .dark_nox {
+     background-color: #fff;
+    // border-radius: 20px;
+  }
+
   .img_wrapper {
     display: flex;
     justify-content: space-between;
@@ -220,7 +231,7 @@
         margin: 20px 0;
         border-radius: 20px;
       }
-      h3{
+      h3 {
         margin-bottom: 20px;
       }
       img:nth-child(4) {
@@ -285,11 +296,10 @@
 
     div {
       width: 100%;
-  
+
       p {
         margin-bottom: 25px;
       }
     }
   }
-
 }

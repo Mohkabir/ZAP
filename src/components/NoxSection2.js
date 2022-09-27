@@ -5,14 +5,14 @@ import Nox2 from "../assets/images/noxImage2.png";
 import Nox3 from "../assets/images/noxImage3.png";
 import Nox4 from "../assets/images/noxImage4.png";
 
-
-const NoxSection2 = () => {
+const NoxSection2 = ({ issDarkMode }) => {
+  const color = issDarkMode ? "white" : "black";
   return (
     <div className="noxSection2">
       <div>
         <p>Style 2</p>
         <div className="head">
-          <NoxLog2 />
+          <NoxLog2 color={color} />
         </div>
         <div className="img_wrapper">
           <img src={Nox1} alt="" />
@@ -32,9 +32,9 @@ const NoxSection2 = () => {
       <div>
         <p className="head3">Style 3</p>
         <div className="head3Logo">
-          <NoxLog3 />
+          <NoxLog3 color={"white"} />
         </div>
-        <div>
+        <div className="nox3_4 ">
           <img src={Nox3} alt="" />
           <img src={Nox4} alt="" />
         </div>
@@ -48,7 +48,7 @@ const NoxSection2 = () => {
       </div>
 
       <div className="approved">
-        <Approved />
+        <Approved color={color} />
       </div>
     </div>
   );

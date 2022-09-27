@@ -28,7 +28,9 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const containerRef2 = useRef(null);
   const [offsetY, setOffsetY] = useState(0);
 
-  const defaultWidth = 50;
+  const defaultWidth = 65;
+  // const defaultWidth = 500;
+
   const [imgWidth, setimgWidth] = useState(defaultWidth);
   const [offsetYAfterView, setOffsetYAfterView] = useState(0);
 

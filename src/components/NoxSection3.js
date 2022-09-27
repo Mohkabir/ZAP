@@ -19,7 +19,6 @@ const NoxSection3 = () => {
             <img src={Nox8} alt="" />
           </div>
         </div>
-      
       </div>
     </div>
   );

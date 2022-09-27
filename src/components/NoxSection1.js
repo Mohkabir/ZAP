@@ -1,7 +1,9 @@
 import React from "react";
 import { NoxLog, NoxLog1, NoxOne, NoxThree, NoxTwo, RightCaret } from "./Icons";
 
-const NoxSection1 = () => {
+const NoxSection1 = ({ issDarkMode }) => {
+  const color = issDarkMode ? "white" : "black";
+
   return (
     <div className="noxSection1">
       <p className="half_text">
@@ -12,27 +14,27 @@ const NoxSection1 = () => {
       <p className="style">style 1</p>
       <div className="box1">
         <span>
-          <NoxOne />
+          <NoxOne color={color} />
         </span>
         <span>
-          <RightCaret />
+          <RightCaret color={color} />
         </span>
         <span>
-          <NoxThree />
+          <NoxThree color={color} />
         </span>
         <span>
-          <RightCaret />
+          <RightCaret color={color} />
         </span>
         <span>
-          <NoxTwo />
+          <NoxTwo color={color} />
         </span>
       </div>
       <div className="box2">
         <p>
-          <NoxLog />
+          <NoxLog color={color} />
         </p>
         <p>
-          <NoxLog1 />
+          <NoxLog1 color={color} />
         </p>
         <p>
           The letters of the logo are formed from a combination of both a{" "}

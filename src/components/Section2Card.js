@@ -24,19 +24,28 @@ const Section2Card = ({
     <div
       key={idx}
       className={`card ${!issDarkMode && "light_mode"} ${
-       screen === "mobile" &&  activeBg === idx && "light_mode_hover"
+        screen === "mobile" && activeBg === idx && "light_mode_hover"
       }`}
-      style={{
-        backgroundImage:
-          screen === "mobile"
-            ? hover === true
-              ? `url(${bg})`
-              : activeBg === idx && `url(${bg})`
-            : hover === true && `url(${bg})`,
-      }}
       onMouseEnter={() => toggleHover(true)}
       onMouseLeave={() => toggleHover(false)}
     >
+      <div
+        className="thumb_img"
+        style={{
+          backgroundImage:
+            screen === "mobile"
+              ? hover === true
+                ? `url(${bg})`
+                : activeBg === idx && `url(${bg})`
+              : hover === true && `url(${bg})`,
+          opacity:
+            screen === "mobile"
+              ? hover === true
+                ? "1"
+                : activeBg === idx && "1"
+              : hover === true && "1",
+        }}
+      ></div>
       <div
         style={{ borderColor: issDarkMode ? "white" : "black" }}
         className="beforeWrap"
