@@ -46,7 +46,6 @@ const NoxSection2 = ({ issDarkMode }) => {
           </p>
         </div>
       </div>
-
       <div className="approved">
         <Approved color={color} />
       </div>
