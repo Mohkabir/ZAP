@@ -25,7 +25,7 @@ const Nox = ({ themeToggle, issDarkMode }) => {
       <div className="noxhero">
         <span>01</span>
       </div>
-      <NoxSection1 />
+      <NoxSection1 issDarkMode={issDarkMode} />
       <NoxSection2 />
       <NoxSection3 />
       <div className="result">
