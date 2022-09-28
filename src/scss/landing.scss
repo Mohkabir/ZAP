@@ -96,7 +96,11 @@
         z-index: -1;
         opacity: 0;
         background-position: center;
-        background-size: 100vh;
+        // background-size: 100vh;
+        // background-size: cover;
+          // background-size: 100%;
+          background-size: cover;
+
         background-repeat: no-repeat;
         transition: all 1s ease-in-out;
       }
@@ -479,12 +483,16 @@ footer {
 
 @import "./MediaQueryLanding";
 
-@media (max-width: 1920px) {
+@media (min-width: 1280px) {
   .section2 {
+    // background-color: red;
     & > .card_wrapper {
       & > .card {
         .thumb_img {
-          background-size: 100%;
+          // background-size: 100%;
+          // background-color: 100vh;
+          // background-position: 100vh;
+          background-size: cover;
         }
       }
     }
