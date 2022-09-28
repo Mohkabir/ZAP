@@ -111,7 +111,9 @@
       }
     }
   }
-
+  .singleImage {
+    height: 100%;
+  }
   .section7 {
     margin: 60px auto;
     h2 {
@@ -228,7 +230,7 @@
       & > .card {
         width: 100%;
         height: 470px;
-   
+
         .beforeWrap {
           .wrap {
             height: 350px;
@@ -299,8 +301,6 @@
       }
     }
   }
-
-
 
   .section6 {
     padding: 0px;

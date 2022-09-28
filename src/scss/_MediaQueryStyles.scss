@@ -18,8 +18,9 @@
   }
 
   .beforeSticky2 {
-    height: initial;
+    height: 100%;
     position: initial;
+    margin-bottom: 80px;
   }
 
   .beforeSticky {
@@ -79,7 +80,9 @@
     position: static;
     height: initial;
   }
-  .beforeSticky2 {
-    height: initial;
+
+   .beforeSticky2 {
+    height: 100%;
+    margin-bottom: 40px;
   }
 }

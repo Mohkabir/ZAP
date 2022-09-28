@@ -51,8 +51,17 @@ const Section2 = ({
 
 
   useEffect(() => {
+
+    // console.log(
+    //   offsetY,
+    //   "offsetY",
+    //   containerRef.current.offsetTop,
+    //   "containerRef.current.offsetTop",
+    //   "calc",
+    //   offsetY - containerRef.current.offsetTop
+    // );
     if (isInViewport1 === true) {
-      let xAxisToScroll = offsetY - containerRef.current.offsetTop;
+      let xAxisToScroll = offsetY - containerRef.current.offsetTop -350;
       scrollRef.current.scrollLeft = xAxisToScroll;
     }
   }, [offsetY]);

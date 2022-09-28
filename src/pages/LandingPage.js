@@ -26,10 +26,12 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
   const beforeStickyRef2 = useRef(null);
   const containerRef = useRef(null);
   const containerRef2 = useRef(null);
+  const singleImgRef = useRef(null);
+
   const [offsetY, setOffsetY] = useState(0);
 
-  const defaultWidth = 65;
-  // const defaultWidth = 500;
+  // const defaultWidth = 65;
+  const defaultWidth = 800;
 
   const [imgWidth, setimgWidth] = useState(defaultWidth);
   const [offsetYAfterView, setOffsetYAfterView] = useState(0);
@@ -42,13 +44,16 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
     setOffsetY(window.pageYOffset);
   };
   useEffect(() => {
+    // check3.current.offsetTop;
+    // console.log(
+    //   "currentOfset",
+    //   singleImgRef.current.offsetTop,
+    //   "offsetY",
+    //   offsetY
+    // );
     if (isInViewport1 === true) {
-      if (scrollDirection === "up") {
-        setOffsetYAfterView(offsetYAfterView - 1);
-      } else {
-        setOffsetYAfterView(offsetYAfterView + 1);
-      }
-      setimgWidth(offsetYAfterView + defaultWidth);
+      const newwidth = offsetY - singleImgRef.current.offsetTop;
+      setimgWidth(newwidth + defaultWidth + 400);
     }
   }, [offsetY]);
 
@@ -81,7 +86,7 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
       <div
         className="beforeSticky desktop"
         style={{
-          height: calculateHeight(beforeStickyRef),
+          height: calculateHeight(beforeStickyRef, 350),
         }}
         ref={containerRef}
       >
@@ -130,12 +135,12 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
         </div>
       </div>
 
-      <div className="wrapper singleImage">
+      <div className="wrapper singleImage" ref={singleImgRef}>
         <div ref={check3} className="viewPort"></div>
         <img
           src={singleImage1}
           alt=""
-          style={{ width: screen === "desktop" ? `${imgWidth}%` : "100%" }}
+          style={{ width: screen === "desktop" ? `${imgWidth}px` : "100%" }}
         />
       </div>
       <OurTeam issDarkMode={issDarkMode} />
