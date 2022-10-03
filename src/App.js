@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PageLayout from "./layout/PageLayout";
-
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./pages/LandingPage";
+
 import { Helmet } from "react-helmet";
 import { Logo } from "./components/Icons";
-import Nox from "./pages/Nox";
-import Forric from "./pages/Forric";
-import CompountCapital from "./pages/CompoundCapital";
-import CubanaGroup from "./pages/CubanaGroup";
-import Luxistt from "./pages/Luxistt";
+import AllRoutes from "./layout/AllRoutes";
 
 function App() {
   const [loading, setloading] = useState(true);
@@ -22,9 +16,6 @@ function App() {
   }, []);
 
   const [issDarkMode, setIssDarkMode] = useState(true);
-  const themeToggle = () => {
-    setIssDarkMode(!issDarkMode);
-  };
 
   if (loading) {
     return (
@@ -43,100 +34,11 @@ function App() {
             issDarkMode ? "black" : "white"
           }; color: ${issDarkMode ? "white" : "#1E1E1E"}}`}</style>
         </Helmet>
-
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <PageLayout issDarkMode={issDarkMode}>
-                {!loading && (
-                  <LandingPage
-                    themeToggle={themeToggle}
-                    issDarkMode={issDarkMode}
-                  />
-                )}
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/nox"
-            element={
-              <PageLayout
-                issDarkMode={issDarkMode}
-                footerColour={{
-                  background: "black",
-                  color: "white",
-                }}
-              >
-                <Nox themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/forric"
-            element={
-              <PageLayout
-                issDarkMode={issDarkMode}
-                footerColour={{
-                  background: "white",
-                  color: "black",
-                }}
-              >
-                <Forric themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-          <Route
-            path="/compound-capital"
-            element={
-              <PageLayout
-                issDarkMode={issDarkMode}
-                footerColour={{
-                  background: "white",
-                  color: "black",
-                }}
-              >
-                <CompountCapital
-                  themeToggle={themeToggle}
-                  issDarkMode={issDarkMode}
-                />
-              </PageLayout>
-            }
-          />
-
-          <Route
-            path="/luxistt"
-            element={
-              <PageLayout
-                issDarkMode={issDarkMode}
-                footerColour={{
-                  background: "#14665E",
-                  color: "white",
-                }}
-              >
-                <Luxistt themeToggle={themeToggle} issDarkMode={issDarkMode} />
-              </PageLayout>
-            }
-          />
-
-          <Route
-            path="/cubana-group"
-            element={
-              <PageLayout
-                issDarkMode={issDarkMode}
-                footerColour={{
-                  background: "white",
-                  color: "black",
-                }}
-              >
-                <CubanaGroup
-                  themeToggle={themeToggle}
-                  issDarkMode={issDarkMode}
-                />
-              </PageLayout>
-            }
-          />
-        </Routes>
+        <AllRoutes
+          setIssDarkMode={setIssDarkMode}
+          issDarkMode={issDarkMode}
+          loading={loading}
+        />
       </div>
     </BrowserRouter>
   );
