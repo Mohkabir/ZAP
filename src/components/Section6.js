@@ -20,25 +20,26 @@ const Section6 = ({
 
   const datas = [
     {
-      title: "Branding",
+      title: "Branding ",
       text: "Brand Strategy, Brand Identity & Positioning, Visual Language, Brand Messaging, Brand Implementation & Guidelines.",
     },
     {
-      title: "Digital Strategy",
+      title: "Digital ",
+      title2: "Strategy ",
       text: "Consumer Insights & Trends, Go-To-Market Planning, Data Science & Analvtics, Product Strategy & Roadmapping.",
     },
     {
-      title: "Product Design",
+      title: "Product ",
+      title2: "Design ",
+
       text: "We work closley with our clients to truly understand who they are, who they are speaking to, and what they want to say.",
     },
     {
-      title: "Web + App Development",
+      title: "Web + App ",
+      title2: "Development ",
+
       text: "Technical Discovery & Architecture. Website Development, eCommerce, Mobile & Web App Development, CRM / ERM Platforms.",
     },
-    // {
-    //   title: "User Experience",
-    //   text: "We work closley with our clients to truly understand who they are, who they are speaking to, and what they want to say.",
-    // },
   ];
 
   return (
@@ -56,7 +57,10 @@ const Section6 = ({
               <div className="card">
                 <div>
                   <h2>
-                    {data.title} <sup>0{idx + 1}</sup>
+                    {data.title} {!data?.title2 && <sup> 0{idx + 1}</sup>}
+                    <br />
+                    {data?.title2}
+                    {data?.title2 && <sup> 0{idx + 1}</sup>}
                   </h2>
                   <p>{data.text}</p>
                 </div>
