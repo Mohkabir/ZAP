@@ -12,7 +12,7 @@ const NoxSection2 = ({ issDarkMode }) => {
       <div>
         <p>Style 2</p>
         <div className="head">
-          <NoxLog2 color={color} />
+          <NoxLog2 color="white" />
         </div>
         <div className="img_wrapper">
           <img src={Nox1} alt="" />
