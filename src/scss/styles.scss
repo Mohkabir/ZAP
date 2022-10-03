@@ -60,7 +60,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  div {
+    width: 200px;
+    height: 200px;
+  }
   @keyframes rotateLogo {
     0% {
       transform: scale(0.7);
@@ -74,8 +79,8 @@ body {
   }
 
   svg {
-    width: 300% !important;
-    height: 300% !important ;
+    width: 100% !important;
+    height: 100% !important ;
     margin: 0 auto;
     animation: rotateLogo 2s ease-in-out;
     animation-iteration-count: infinite;

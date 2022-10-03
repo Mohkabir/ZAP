@@ -63,12 +63,9 @@
   }
   .loadingEffect {
     width: 80%;
-
-    svg {
-      width: 250% !important;
-      height: 250% !important ;
-      margin: 0 auto;
-      animation: rotateLogo 3s ease-in-out;
+    div {
+      width: 150px;
+      height: 150px;
     }
   }
 
@@ -81,7 +78,7 @@
     height: initial;
   }
 
-   .beforeSticky2 {
+  .beforeSticky2 {
     height: 100%;
     margin-bottom: 40px;
   }

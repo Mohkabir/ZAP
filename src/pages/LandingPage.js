@@ -44,13 +44,6 @@ const CaseOne = ({ themeToggle, issDarkMode }) => {
     setOffsetY(window.pageYOffset);
   };
   useEffect(() => {
-    // check3.current.offsetTop;
-    // console.log(
-    //   "currentOfset",
-    //   singleImgRef.current.offsetTop,
-    //   "offsetY",
-    //   offsetY
-    // );
     if (isInViewport1 === true) {
       const newwidth = offsetY - singleImgRef.current.offsetTop;
       setimgWidth(newwidth + defaultWidth + 400);
